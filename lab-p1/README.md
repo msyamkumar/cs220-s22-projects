@@ -2,8 +2,7 @@
 
 Welcome to your first lab!  This semester, you're going to learn how to write your own Python code.  But for this lab, you're just going to practice running some Python programs we give you.
 
-**Important:** Before going to the lab, install Python 3.9 on your laptop. We've created videos showing how to do this on [Windows](https://www.youtube.com/watch?v=fUohsnkuiKQ&ab_channel=MEENASYAMKUMAR) and [Mac](https://www.youtube.com/watch?v=BI4J4-3nWhQ&ab_channel=MEENASYAMKUMAR).
-For the Windows installation there is a slight error in the video! At 3:15, you should check BOTH checkboxes! Otherwise Windows will default to the pre-installed version of python. You'll probably get some "module not found" error when running our test script in p1. You can try either reinstalling anaconda with both checkboxes, or you can uninstall the pre-installed version of python using Add or Remove Programs.
+**Important:** Before going to the lab, install Anaconda with Python 3.9 on your laptop. We've created videos showing how to do this on [Windows](https://www.youtube.com/watch?v=EhbuqMshs08) and [Mac](https://www.youtube.com/watch?v=CZQJJX-wl4M). Please make sure that *both* checkboxes are checked during the Windows installation.
 
 **If you have already installed Python or Anaconda before this semester, please uninstall and reinstall, following the instructions in these videos. Please do not upgrade your Python version anytime during the semester. We expect you to retain Python 3.9 throughout this semester.**
 
