@@ -3,6 +3,7 @@
 Welcome to your first lab!  This semester, you're going to learn how to write your own Python code.  But for this lab, you're just going to practice running some Python programs we give you.
 
 **Important:** Before going to the lab, install Python 3.9 on your laptop. We've created videos showing how to do this on [Windows](https://www.youtube.com/watch?v=fUohsnkuiKQ&ab_channel=MEENASYAMKUMAR) and [Mac](https://www.youtube.com/watch?v=BI4J4-3nWhQ&ab_channel=MEENASYAMKUMAR).
+For the Windows installation there is a slight error in the video! At 3:15, you should check BOTH checkboxes! Otherwise Windows will default to the pre-installed version of python. You'll probably get some "module not found" error when running our test script in p1. You can try either reinstalling anaconda with both checkboxes, or you can uninstall the pre-installed version of python using Add or Remove Programs.
 
 **If you have already installed Python or Anaconda before this semester, please uninstall and reinstall, following the instructions in these videos. Please do not upgrade your Python version anytime during the semester. We expect you to retain Python 3.9 throughout this semester.**
 
@@ -223,7 +224,7 @@ cd ..
 
 ### Task 3.3: Use `pwd` to verify that you are now in the `cs220` directory.
 
-### Task 3.4: Use Shell commands to make a directory for next week's lab. 
+### Task 3.4: Use Shell commands to make a directory for next week's lab.
 
 Use mkdir, that is **M**a**K**e**DIR**ectory, to *make* a `lab2` directory.
 
@@ -256,7 +257,7 @@ OR
 ```
 cd .\lab1\
 ```
-The above options are identical. ".\\" for Windows and "./" for Mac mean "relative to the current directory". The "\\" or "/" *after* `lab1` indicates that `lab1` is a directory. 
+The above options are identical. ".\\" for Windows and "./" for Mac mean "relative to the current directory". The "\\" or "/" *after* `lab1` indicates that `lab1` is a directory.
 
 As an additional exercise, consider the following...
 
@@ -304,17 +305,17 @@ To run this cell, click the "Run" button in the toolbar, which is highlighted gr
 
 <img src="images/jupyter_lab.jpg" width="700">
 
-Alternatively, you can click Kernel -&gt; Restart & Run All. 
+Alternatively, you can click Kernel -&gt; Restart & Run All.
 
 ### Task 4.3: Save your notebook.
 
 Jupyter's autosave is quite unreliable, so make sure to frequently hit the save button. It is the "save icon". Keyboard shortcut for this would be `command + s` or `ctrl + s`.
 
-### Task 4.4: Download a different Notebook file. 
+### Task 4.4: Download a different Notebook file.
 
 Download `main.ipynb` using the same steps as Task 1.7. Make sure that the extension is `.ipynb`. Now refresh the browser tab containing the `jupyter notebook` homepage. You should be able to see `main.ipynb` in the list of files. Open `main.ipynb` and run the cell containing the code.
 
-Most lectures will have live-coding examples, so you will be doing this step at the start of each lecture. 
+Most lectures will have live-coding examples, so you will be doing this step at the start of each lecture.
 
 This is the end of segment 4. Raise your hand and show your TA the output of the notebook you just downloaded. No discussion for this segment.
 
@@ -322,7 +323,7 @@ This is the end of segment 4. Raise your hand and show your TA the output of the
 
 Before we move onto the next program, let's have a look at hello.py again.
 
-### Task 5.1: Use `cat` to see the contents of hello.py. 
+### Task 5.1: Use `cat` to see the contents of hello.py.
 
 You should see the following:
 
@@ -336,7 +337,7 @@ What you're looking at is the code for the hello.py program. Feel free to use `c
 
 At this point, you should still have a terminal that is working in your `lab1` folder (a.k.a. directory).
 
-### Task 5.3: List the contents of your lab1 directory. 
+### Task 5.3: List the contents of your lab1 directory.
 
 It should contain hello.py, lab.ipynb, main.ipynb, and double.py.
 
@@ -353,7 +354,7 @@ The program will say `please enter a number:`. This is known as a "prompt" (a fa
 Type `5` and press ENTER.  Make sure that the program tells you the answer is `10.0`.
 
 ### Task 5.5: Use Up Arrow to view previous commands
-While using the terminal, press the up arrow key to scroll through the previous commands. 
+While using the terminal, press the up arrow key to scroll through the previous commands.
 
 If you press the up arrow key once, the prompt should show `python double.py` again. You can use the up and down arrow keys to go through your command history. Press Enter to run `double.py`, and this time try entering a negative number.
 

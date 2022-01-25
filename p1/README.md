@@ -35,24 +35,24 @@ through the process.  Feel free to get any kind of help from anybody (fellow stu
 You should have a folder `cs220` that you created for lab-p1 under `Documents`. We're assuming you did the lab and know how to do all the Tasks we mentioned. If you're confused about any of the following steps, refer back to your lab.
 
 #### Create a sub-folder called `p1` in your `cs220` folder
-Refer to Task 1.1 (from lab-p1), if you need help.  
+Refer to [Task 1.1](https://github.com/msyamkumar/cs220-s22-projects/tree/main/lab-p1#task-11-create-the-folders-for-this-lab) if you need help.  
 
 This will store all your files related to p1. This way, you can keep files for different projects separate (you'll create a `p2` sub-folder for the next project and so on). Unfortunately, computers can crash and files can get accidentally deleted, so make sure you backup your work regularly (at a minimum, consider emailing yourself relevant files on occasion).
 
 #### Download `test.py` to your `p1` folder.
-Refer to Task 1.7 (from lab-p1), if you need help.
+Refer to [Task 1.7](https://github.com/msyamkumar/cs220-s22-projects/tree/main/lab-p1#task-17-correctly-download-a-python-file) if you need help.
 
 #### Download `questions.py` to your `p1` folder.
-Refer to Task 1.7 (from lab-p1) again.
+Refer to [Task 1.7](https://github.com/msyamkumar/cs220-s22-projects/tree/main/lab-p1#task-17-correctly-download-a-python-file) again.
 
 #### Open a terminal in your `p1` folder.
-Refer to Task 1.3-1.5 (from lab-p1).
+Refer to [Task 1.3-1.5](https://github.com/msyamkumar/cs220-s22-projects/tree/main/lab-p1#task-13-open-a-terminal-emulator-aka-a-terminal) (from lab-p1).
 
 #### Use `cat` to look at `questions.py`
 Reflect and consider: What do you think we use `questions.py` for?
 
 #### Create and open new notebook called `main.ipynb`
-Refer to Tasks 4.1-4.3 (from lab-p1).
+Refer to [Tasks 4.1-4.3](https://github.com/msyamkumar/cs220-s22-projects/tree/main/lab-p1#task-41-start-up-a-juptyer-notebook).
 
 Please name your notebook "main". This is necessary because our test file only recognizes notebooks with this name. Now, if you go back to File Explorer or Finder and open the `p1` folder, you should see a file named `main.ipynb` (though the extension of ".ipynb" may be hidden depending on your
 computer).  *This is the file you'll hand in at the end.*
@@ -70,7 +70,7 @@ name = "World"
 ```
 
 Then hit SHIFT+ENTER on the keyboard (this means you should first press and hold down the SHIFT key, then press the ENTER key at the
-same time). This does the same thing as clicking the Run button from the lab (Task 4.2).  
+same time). This does the same thing as clicking the Run button from the lab ([Task 4.2](https://github.com/msyamkumar/cs220-s22-projects/tree/main/lab-p1#task-42-write-and-run-code-in-your-jupyter-notebook)).  
 
 There should now be an `Out [1]` area saying this:
 
