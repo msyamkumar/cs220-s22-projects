@@ -322,7 +322,7 @@ This is the end of segment 4. Raise your hand and show your TA the output of the
 
 Close EVERYTHING related to the previous segment. The browser, the terminal, everything.
 
-Then open a new terminal and cd to the `lab1` direcory (Tasks 1.3-1.5).
+Then open a new terminal and cd to the `lab1` directory (Tasks 1.3-1.5).
 
 Before we move onto the next program, let's have a look at hello.py again.
 
