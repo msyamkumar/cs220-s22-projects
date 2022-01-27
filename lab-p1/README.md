@@ -72,7 +72,7 @@ At the top of this page, you'll see a list of files, something like this:
 
 Downloading files from GitHub (the site hosting this document) is a little tricky for those new to it. Try this:
 
-1. Right-click on hello.py
+1. Right-click on hello.py (the actual text, NOT the white bar it sits in)
 2. Choose "Save Link As..." (or similar)
 3. Navigate to your "lab1" folder in the pop-up
 4. Ensure that you download file with proper extension:
