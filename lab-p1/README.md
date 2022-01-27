@@ -320,6 +320,10 @@ This is the end of segment 4. Raise your hand and show your TA the output of the
 
 ## Segment 5: Reading Code
 
+Close EVERYTHING related to the previous segment. The browser, the terminal, everything.
+
+Then open a new terminal and cd to the `lab1` direcory.
+
 Before we move onto the next program, let's have a look at hello.py again.
 
 ### Task 5.1: Use `cat` to see the contents of hello.py.
