@@ -161,6 +161,8 @@ print("Hello, World!")
 
 That's the end of this segment! Check in with your TA before moving onto the next one. Be ready for a short discussion!
 
+------------------------------
+
 ## Segment 2: Run Your First Program
 
 A "path" is how a computer knows where a file is, and a "pathname" describes a path. Put simply, a pathname is a more complete name for a file or folder.
@@ -183,6 +185,8 @@ Hello, World!
 Congrats, you just executed your first Python program! That's the end of this segment.
 Raise your hand and show a TA your Hello World before moving on.
 No discussion for this segment :)
+
+------------------------------
 
 ## Segment 3: Use Terminal to run Shell Commands
 
@@ -272,6 +276,8 @@ ls ../
 What do you think this does?
 That's the end of this segment. Raise your hand, and show a TA the result of the above `ls` command.
 
+------------------------------
+
 ## Segment 4: Use a Jupyter Notebook to run Python code
 You'll be doing the majority of your coding in a Jupyter Notebook file. Let's make one.
 
@@ -317,6 +323,8 @@ Download `main.ipynb` using the same steps as Task 1.7. Make sure that the exten
 Most lectures will have live-coding examples, so you will be doing this step at the start of each lecture.
 
 This is the end of segment 4. Raise your hand and show your TA the output of the notebook you just downloaded. No discussion for this segment.
+
+------------------------------
 
 ## Segment 5: Reading Code
 
