@@ -9,11 +9,11 @@ To get started, please create a `lab2` directory inside your `cs220` directory (
 After completing this lab, you will be able to...
 
 * Run Python code using interactive mode, script mode, and notebook "mode"
-* Write Python expressions containing mathematical, comparison, and boolean operators
+* Write Python expressions containing mathematical, comparison, and Boolean operators
 * Identify correct operator precedence order
 * Apply parentheses to override operator precedence in your expression, when needed
 * Translate English statements into Python expressions
-* Write correct boolean expressions with subparts separated by boolean operators of `or` and `and`
+* Write correct Boolean expressions with subparts separated by Boolean operators of `or` and `and`
 
 ------------------------------
 ## Segment 1: Interactive Mode (Python Shell)
