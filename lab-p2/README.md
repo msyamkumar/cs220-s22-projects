@@ -4,6 +4,17 @@ In lecture this week, we learned about three ways to run Python: interactive mod
 
 To get started, please create a `lab2` directory inside your `cs220` directory (if you haven't already).  Then, open a terminal and use `cd` to navigate to `lab2` (you may need to review the steps from [lab-p1](https://github.com/msyamkumar/cs220-s22-projects/tree/main/lab-p1) to remember how to find the pathname of the `lab2` directory).
 
+## Learning Objectives
+
+After completing this lab, you will be able to...
+
+* Run Python code using interactive mode, script mode, and notebook "mode"
+* Write Python expressions containing mathematical, comparison, and boolean operators
+* Identify correct operator precedence order
+* Apply parentheses to override operator precedence in your expression, when needed
+* Translate English statements into Python expressions
+* Write correct boolean expressions with subparts separated by boolean operators of `or` and `and`
+
 ------------------------------
 ## Segment 1: Interactive Mode (Python Shell)
 
