@@ -2,6 +2,8 @@
 
 ## Clarifications/Corrections
 
+2/2, 1:26PM: Q14 previously asked you to solve for distance. It was actually supposed to ask you to solve for time in hours.
+
 **Find any issues?** Report to us:
 
 - SAURABH KULKARNI <skulkarni27@wisc.edu>
