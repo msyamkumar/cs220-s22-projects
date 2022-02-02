@@ -72,7 +72,7 @@ At the top of this page, you'll see a list of files, something like this:
 
 Downloading files from GitHub (the site hosting this document) is a little tricky for those new to it. Try this:
 
-1. Right-click on hello.py
+1. Right-click on hello.py (the actual text, NOT the white bar it sits in)
 2. Choose "Save Link As..." (or similar)
 3. Navigate to your "lab1" folder in the pop-up
 4. Ensure that you download file with proper extension:
@@ -161,6 +161,8 @@ print("Hello, World!")
 
 That's the end of this segment! Check in with your TA before moving onto the next one. Be ready for a short discussion!
 
+------------------------------
+
 ## Segment 2: Run Your First Program
 
 A "path" is how a computer knows where a file is, and a "pathname" describes a path. Put simply, a pathname is a more complete name for a file or folder.
@@ -183,6 +185,8 @@ Hello, World!
 Congrats, you just executed your first Python program! That's the end of this segment.
 Raise your hand and show a TA your Hello World before moving on.
 No discussion for this segment :)
+
+------------------------------
 
 ## Segment 3: Use Terminal to run Shell Commands
 
@@ -272,6 +276,8 @@ ls ../
 What do you think this does?
 That's the end of this segment. Raise your hand, and show a TA the result of the above `ls` command.
 
+------------------------------
+
 ## Segment 4: Use a Jupyter Notebook to run Python code
 You'll be doing the majority of your coding in a Jupyter Notebook file. Let's make one.
 
@@ -318,11 +324,13 @@ Most lectures will have live-coding examples, so you will be doing this step at 
 
 This is the end of segment 4. Raise your hand and show your TA the output of the notebook you just downloaded. No discussion for this segment.
 
+------------------------------
+
 ## Segment 5: Reading Code
 
 Close EVERYTHING related to the previous segment. The browser, the terminal, everything.
 
-Then open a new terminal and cd to the `lab1` direcory.
+Then open a new terminal and cd to the `lab1` directory (Tasks 1.3-1.5).
 
 Before we move onto the next program, let's have a look at hello.py again.
 
