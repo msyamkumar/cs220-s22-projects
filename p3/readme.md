@@ -23,7 +23,10 @@ In this project, you'll analyze data of about five different renewable energy so
 
 You'll get practice calling functions from the `project` module, which we've provided, and practice writing your own functions.
 
-Start by downloading `project.py`, `test.py`, `questions.py` and `energy.csv`. Double check that these files don't get renamed by your browser (by running `ls` in the terminal from your `p3` project directory). You'll do all your work in a new `main.ipynb` notebook that you'll create also in `p3` project directory and hand in when you're done (please do not write your functions in a separate file). You'll test as usual by running `python test.py` (or similar, depending on your laptop setup). 
+Start by downloading `project.py`, `test.py`, `questions.py` and `energy.csv`. Double check that these files don't get renamed by your browser (by running `ls` in the terminal from your `p3` project directory). 
+
+You'll do all your work in a new `main.ipynb` notebook that you'll create also in `p3` project directory and hand in when you're done (please do not write your functions in a separate file). You'll test as usual by running `python test.py` (or similar, depending on your laptop setup). 
+Note: If you do not recall how to create a new notebook file, please follow the steps in Segment 4 Task 4.1 in [lab-p1](https://github.com/msyamkumar/cs220-s22-projects/tree/main/lab-p1).
 
 The first cell should contain and only contain information like this:
 ```python
@@ -57,10 +60,7 @@ index|energy type|2015|2016|2017|2018|2019|2020
 
 This table lists 5 different renewable energy sources, and the amount of energy from each of these sources that was consumed by the US commercial power industry in each of the years between 2015 and 2020. The units used here are trillions of Btu (British thermal units).
 
-The dataset is in the `energy.csv` file which you downloaded. We'll learn about CSV files later in the semester. For now, you should know this about them:
-* it's easy to create them by exporting from Excel
-* it's easy to use them in Python programs
-* we'll give you a `project.py` module to help you extract data from CSV files until we teach you to do it yourself
+The dataset is in the `energy.csv` file which you downloaded. Alternatively, you can open `energy.csv` file, to look at the same data and to verify answers to simple questions.
 
 ## Requirements
 
@@ -69,7 +69,9 @@ You **may not** hardcode indices in your code. For example, if we ask how much W
 For some of the questions, we'll ask you to write (then use) a function to compute the answer.  If you compute the answer **without** creating the function we ask you to write, we'll **manually deduct** points from your `test.py` score when recording your final grade, even if the way you did it produced the correct answer.
 
 ## Incremental Coding and Testing
-You should always strive to do incremental coding. Incremental coding enables you to avoid challenging bugs. Always write a few lines of code and then test those lines of code, before proceeding to write further code. We also recommend you to do incremental testing: solve a question and run auto-grader script `test.py`, to verify that you get a PASS for that particular question, before proceeding to the next.
+You should always strive to do incremental coding. Incremental coding enables you to avoid challenging bugs. Always write a few lines of code and then test those lines of code, before proceeding to write further code. You can use `print` function call for testing intermediate step outputs. Once you are done with your verification, make sure to remove the `print` function calls. **You should never use `print` function call to print answer to a question.** This is because `test.py` does not recognize `print` function call output. You should only display the output. That is, you can specify a variable name or directly display a function call's output.
+
+We also recommend you to do incremental testing: solve a question and run auto-grader script `test.py`, to verify that you get a PASS for that particular question, before proceeding to the next.
 
 ## Questions and Functions
 
@@ -77,11 +79,9 @@ You should always strive to do incremental coding. Incremental coding enables yo
 ### #Q1: What is the index of Solar Energy?
 
 
-### #Q2: How much of the energy type at index 5 was consumed by the US electric power sector in 2020?
+### #Q2: How much of the Wood Energy was consumed by the US electric power sector in 2020?
 
-Your answer should just be a number (without any units at the end).
-
-It is OK to hardcode `5` for Q2 in this case since we asked directly about index 5 (instead of about "Wood Energy"). Please **do not** hardcode the indices for Q3 onwards.
+Your answer should just be a number (without any units at the end). You **should not** hardcode the ID of "Wood Energy". You must call the appropriate function to determine the ID.
 
 ---
 
@@ -110,7 +110,7 @@ def year_max(year):
     wood_consumption = project.get_consumption(project.get_idx("Wood Energy"), year)    
     biomass_consumption = project.get_consumption(project.get_idx("Biomass Energy"), year)
 
-    # use builtin max function to get the maximum of the five values
+    # use built-in max function to get the maximum of the five values
     return max(hydroelectric_consumption, solar_consumption, wind_consumption, wood_consumption, biomass_consumption)
 ```
 
@@ -119,8 +119,9 @@ def year_max(year):
 Use `year_max` to answer this.
 
 ### #Q5: What was the the largest amount of energy consumed by the US electric power sector from a single renewable energy source between 2015 and 2020?
+Use year_max to answer this. The bounds here are inclusive. Meaning you should consider the years 2015 and 2020 for your calculation.
 
-Hint: Look at how `max()` was used in the lab.
+Hint: Recall that we can use `max()` function to compute maximum of some values. Look at the lab examples where you used `max()` function.
 
 ---
 
@@ -140,7 +141,7 @@ def energy_min(source):
     # and return that value
 ```
 
-This function should compute the minimum energy consumed by the US electric power sector from the given renewable energy source in any of the six years.
+This function should compute the minimum energy consumed by the US electric power sector from the given renewable energy source, considering consumption in all six years.
 
 ### #Q6: What was the minimum amount of Solar Energy consumed by the US electric power sector in a single year?
 
@@ -148,13 +149,15 @@ Use your `energy_min` function.
 
 ### #Q7: What was the minimum amount of Wind Energy consumed by the US electric power sector in a single year?
 
+Use your `energy_min` function.
+
 ---
 
 ### Function 3: `energy_avg(energy_source)`
 
 This function should compute the average energy consumed by the US electric power sector from the given energy source across the six years in the dataset.
 
-Hint: start by copy/pasting `energy_min` and renaming your copy to `energy_avg`.  Instead of computing the minimum of `y15`, `y16`, etc., compute the average of these by adding them together, then dividing by six.
+Hint: start by copy/pasting `energy_min` and renaming your copy to `energy_avg`.  Instead of computing the minimum of `y15`, `y16`, etc., compute the average of these by adding them together, then dividing by six. **You may hardcode 6 for the purpose of this average computation**.
 
 ### #Q8: How much Biomass Energy was consumed by the US electric power sector on average between 2015 and 2020?
 
@@ -162,12 +165,13 @@ Use your `energy_avg` function.
 
 ### #Q9: How much Conventional Hydroelectric Power was consumed by the US electric power sector on average between 2015 and 2020?
 
+Use your `energy_avg` function.
 
 ### #Q10: Relative to its 6 year average, how much more Wind Energy was consumed by the US electric power sector in 2019?
 
-We want you to calculate 2019 consumption as a proportion of the average, and report a percentage between 0 and 100, with no percent sign.  
+Use your `energy_avg` function. We want you to calculate 2019 consumption as a proportion of the average, and report a percentage between 0 and 100, with no percent sign.  
 
-For example, if the average was 10, and a certain year showed 13, the answer is 30. You do not need to round your answer.
+For example, if the average was 10, and a certain year consumption was 13, the answer is 30. You do not need to round your answer. 
 
 ---
 
@@ -178,11 +182,9 @@ This function should compute the total renewable energy consumption of the US el
 You can start from the following code:
 
 ```python
-def year_sum(year=2015):
+def year_sum(year = 2015):
      pass # TODO: replace this line with your code
 ```
-**Note**: Python requires all functions to have at least one line of code. When you don't have some code yet, it's common for that line to be `pass`, which does nothing. After writing the rest of the function, you may safely delete the `pass` from the function. Note the default arguments above.
-
 
 ### #Q11: How much renewable energy was consumed by the US electric power sector in 2015?
 
@@ -201,11 +203,11 @@ This function should return the average increase/decrease in consumption (could 
 You can start with the following code snippet:
 
 ```python
-def change_per_year(energy, start_year=2015, end_year=2020):
+def change_per_year(energy, start_year = 2015, end_year = 2020):
      pass # TODO: replace this line with your code
 ```
 
-We're not asking you to do anything complicated here; you just need to compute the difference in consumption between the last year and the first year, then divide by the number of elapsed years.
+We're not asking you to do anything complicated here; you just need to compute the difference in consumption between the last year and the first year, then divide by the number of elapsed years. Recall that you created a similar function in the lab.
 
 
 ### #Q13: How much has the consumption of Wood Energy by the US electric power sector changed per year (on average) from 2015 to 2020?
@@ -226,19 +228,21 @@ Write a function named `find_threshold_year` to estimate the year when the consu
 
 **Note**: You may find that the year when the consumption crosses the threshold is not a whole number. For instance, you may find that the consumption of Biomass Energy by the US electric power sector goes below a threshold of 100 (trillion Btu) in 2038.42. Of course, a fractional number doesn't make much sense in this context, so in this case you need to round up the number to 2039.
 
-In order to round up the numbers, you may use the function `math.ceil` from the `math` module. You can refer to the [official documentation](https://docs.python.org/3/library/math.html). You can also take a look at [this example](https://www.geeksforgeeks.org/python-math-ceil-function/). Before using the function, remember to import `math` module.
+In order to round up the numbers, you may use the function `math.ceil` from the `math` module. You can refer to the [official documentation](https://docs.python.org/3/library/math.html). You can also take a look at [this example](https://www.geeksforgeeks.org/python-math-ceil-function/). Before using the function, remember to import `math` module. 
 
-**It is a good practice to include all import statements at the beginning of your program. Go back to the input cell where you imported project and add the below import statement.**
-
+You must import math module in the same cell (top of your notebook) where you imported project. If your import is somewhere else, **we'll manually deduct points**.
+Go back to the input cell where you imported project and add the below import statement.
 
 ```python
 import math
 ```
 
+`find_threshold_year` function **must invoke** `change_per_year` function. **We'll manually deduct points** if you don't invoke `change_per_year`.
+
 If you find it challenging to write this function, you can start with the following code snippet:
 
 ```python
-def find_threshold_year(energy, threshold=0):
+def find_threshold_year(energy, threshold = 0):
     pass
      # TODO: compute the average change in consumption from 2015 to 2020
      # TODO: compute the difference between threshold and consumption in 2020
@@ -247,7 +251,7 @@ def find_threshold_year(energy, threshold=0):
      # TODO: use math.ceil() to round it up.
 ```
 
-If you find any of this confusing, feel free to reach out to TAs and Peer Mentors!
+If you find any of this confusing, feel free to attend office hours, to discuss with a TA / peer mentor.
 
 ### #Q15: In which year is the consumption of Wood Energy by the US electric power sector estimated to reach 100 trillion Btu?
 
@@ -259,7 +263,7 @@ Do **not** hardcode the consumption of Wood Energy to answer this. Hint: Q17 is 
 
 ---
 
-### Function 7: `find_overtake_year(energy1,energy2)`
+### Function 7: `find_overtake_year(energy1, energy2)`
 
 We previously saw that the consumption of some energy sources by the US electric power sector is growing. But we also saw that some energy sources are growing faster than others. Similarly, the consumption of some energy sources are shrinking much faster than others. Just like we estimated when some energy sources will shrink to zero, it will be interesting to estimate when some energy sources will overtake others in their consumption.
 
@@ -268,6 +272,8 @@ Write a function named `find_overtake_year` to estimate the year when the consum
 Hint 1: You will need to use `math.ceil()` once again to get you answer rounded up.
 
 Hint 2: Focus on the difference in energy consumption between the two energy sources, and just like `find_threshold_year`, estimate when this crosses the threshold 0.
+
+`find_overtake_year` function **must invoke** `change_per_year` function. **We'll manually deduct points** if you don't invoke `change_per_year`.
 
 You can start with the following code snippet:
 
@@ -287,17 +293,28 @@ def find_overtake_year(energy1, energy2):
 Use `find_overtake_year`. Save the answer to this question as a variable - you'll use it in Q19.
 
 ### #Q19: Estimate how much Solar Energy will be consumed in the year that you found in Q18.
-Be sure to use the variable you defined in Q18! Do not hardcode the answer.  
+Be sure to use the variable you defined in Q18! **Do not hardcode the answer.** We'll manually deduct points if you hardcode.  
 
 Hint: We know the consumption of Solar Energy in 2020. We know the average change in consumption per year for Solar Energy. If we assume that the consumption changes the same amount each year between 2020 and the year you found in Q18, we can calculate the total change across that time interval. Then, we add that total change to the starting point (2020 consumption).  
 
 ### #Q20: What is the increase in the unit market share for Solar Energy from 2018 to 2019?
 Your answer should be a percentage from 0.0 to 100.0. You can find the definition of unit market share [here](https://en.wikipedia.org/wiki/Market_share#Construction).
 
-Hint: You may find one of the earlier functions you wrote useful for computing the market share. Look for it! It may also help to do this problem on paper first - it involves some math.
+You will find one of the earlier functions you wrote useful for computing the market share. Look for it! You must invoke the appropriate prior function applicable for this calculation. **We'll manually deduct points** if you don't invoke the function you previously defined.
 
----
+Hint: It may also help to do this problem on paper first - it involves some math.
 
-#### READ ME: Please remember to `Kernel->Restart and Run All` to check for errors, save your notebook, then run the test.py script one more time before submitting the project. To keep your code concise, please remove your own testing code that does not influence the correctness of answers. Finally, if you are unable to solve a question and have partial code that is causing an error when running test.py, please comment out the lines in the cell for that question before submitting your file. Failing to do so will cause the auto-grader to fail when you submit your file and give you 0 points even if you have some questions correctly answered.
+------------------------------
 
-Cheers!
+## IMPORTANT: Submission instructions
+- Review [Grading Rubric](https://github.com/msyamkumar/cs220-s22-projects/tree/main/p3/Rubric.MD), to ensure that you don't lose points during code review.
+- Please remember to **`Kernel->Restart and Run All`** to check for errors, save your notebook, then run the **`test.py`** script one more time before submitting the project.
+    - To keep your code concise, please remove your own testing code that does not influence the correctness of answers.
+    - __If you are unable to solve a question and have partial code that is causing an error__ when running test.py, please __comment out the lines in the cell for that question.__ Failing to do so will cause the auto-grader to fail when you submit your file and give you 0 points even if you have some questions correctly answered.
+    - Make sure that all the fields in the header cell are correctly populated, including **submitter** and **partner**.
+    - Make sure that you have #q1, #q2, etc., as comments in the cells that answer each of the 20 questions.
+- Follow the same steps as prior projects to turn in main.ipynb to the course website. If required, review those steps.
+- It is your responsibility to make sure that your project clears auto-grader tests on our testing system. 
+	- Approximately 4 hours after you submit your program, auto-grader test results will become available. Make sure to use **View Submissions** to check the auto-grader test results.
+
+------------------------------
