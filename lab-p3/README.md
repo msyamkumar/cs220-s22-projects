@@ -2,7 +2,7 @@
 
 ### Corrections/Clarifications
 
-None yet
+- Thursday Feb 10 9:41 AM: `practice.ipynb` updated with correct function name as `get_change_per_year` for Task 2.5.
 
 **Find any issues?** Report to us:
 
