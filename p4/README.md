@@ -205,7 +205,9 @@ def effective_damage(attacker, defender):
     #TODO: compute the damage caused by attack, considering the higher bonus and return it
 ```
 
-`effective_damage` function definition must invoke the appropriate function from lab-p4 for the first step. **We'll manually deduct points** if you don't invoke the relevant function. Use the `effective_damage` function to answer the next three questions.
+`effective_damage` function definition must invoke the `get_num_types` function you wrote during lab. 
+Copy and paste it above your definition of `effective_damage`. **We'll manually deduct points** if you don't invoke `get_num_types`.   
+Use the `effective_damage` function to answer the next three questions.
 
 ### **#Q5: How much damage does Pikachu do to Haunter?**
 
@@ -296,7 +298,7 @@ def luap_battle(pkmn1, pkmn2):
     # TODO: Return the output of battle(pkmn1, pkmn2) only when the battle follows the LUAP guidelines.
     # TODO: If it does not follow the guidelines, output "Forbidden".
 ```
-`luap_battle` function definition must invoke the appropriate function from lab-p4 for determining whether Pokémons are from the same region. **We'll manually deduct points** if you don't invoke the relevant function.
+`luap_battle` function definition must invoke the function `same_region`, which you defined in lab-p4 to determine whether Pokémon are from the same region. Copy and paste `same_region` before your definition of `luap_battle`. **We'll manually deduct points** if you don't invoke `same_region`.
 
 Note: We only need to know the first type as there is no `'Fire'` or `'Bug'` in the second type. When the battle follows the LUAP guidlines, `luap_battle(pkmn1, pkmn2)` outputs the output of `battle(pkmn1, pkmn2)` else it outputs `Forbidden`. Please complete the `if` conditional in the above template then answer the following questions.
 
