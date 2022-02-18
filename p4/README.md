@@ -26,7 +26,7 @@ Please go through [lab-p4](https://github.com/msyamkumar/cs220-s22-projects/tre
 
 For this project, you'll be using the data from `pokemon_stats.csv` and `type_effectiveness_stats.csv` to simulate Pokémon battles. This data was gathered by the Python program `gen_csv.ipynb` from the website [https://www.pokemondb.net/](https://www.pokemondb.net/).
 
-- To start, download `project.py`, `test.py`, `type_effectiveness_stats.csv`, and `pokemon_stats.csv`.
+- To start, download `project.py`, `questions.py`, `test.py`, `type_effectiveness_stats.csv`, and `pokemon_stats.csv`.
 - You'll do your work in a Jupyter Notebook, producing a `main.ipynb` file.
 - You'll test as usual by running `python test.py` to test your `main.ipynb` file.
 
