@@ -2,6 +2,8 @@
 
 ### **Corrections and Clarifications**
 
+- 10:00PM, 2/17: The writeup erroneously stated that no Pokémon has a second type of `'Bug'` or `'Fire'`. We are issuing a temporary correction (in the description of `luap_battle`) and will make a detailed announcemement on Piazza soon.
+
 Find any issues? Report to us:
 
 - Joon ([jhuh23@wisc.edu](mailto:jhuh23@wisc.edu))
@@ -300,7 +302,9 @@ def luap_battle(pkmn1, pkmn2):
 ```
 `luap_battle` function definition must invoke the function `same_region`, which you defined in lab-p4 to determine whether Pokémon are from the same region. Copy and paste `same_region` before your definition of `luap_battle`. **We'll manually deduct points** if you don't invoke `same_region`.
 
-Note: We only need to know the first type as there is no `'Fire'` or `'Bug'` in the second type. When the battle follows the LUAP guidlines, `luap_battle(pkmn1, pkmn2)` outputs the output of `battle(pkmn1, pkmn2)` else it outputs `Forbidden`. Please complete the `if` conditional in the above template then answer the following questions.
+Correction: A previous edition of this writeup said that there exist no Pokémon with `'Bug'` or `'Fire'` as a second type. For now, assume that `'Bug'` or `'Fire'` will never show up as a second type when we test `luap_battle`. Should this assumption change, we will issue an announcement on Piazza. Please look out for that.  
+
+When the battle follows the LUAP guidlines, `luap_battle(pkmn1, pkmn2)` outputs the output of `battle(pkmn1, pkmn2)` else it outputs `Forbidden`. Please complete the `if` conditional in the above template then answer the following questions.
 
 
 ### **#Q17: What is the output of luap_battle('Paras', 'Arcanine')?**
