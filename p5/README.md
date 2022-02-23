@@ -167,10 +167,7 @@ functions you created in lab to your project notebook and use those functions. *
 ---
 
 ### Function Suggestion:
-
-We suggest you complete a function something like the following
-to answer the next several questions
-(this is **not** a requirement if you prefer to solve the problem another way):
+You must complete the following function to answer the next several questions.
 
 ```python
 def deadliest_in_range(year1, year2):
