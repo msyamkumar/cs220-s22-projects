@@ -263,7 +263,7 @@ To break ties (multiple decades with the least number of hurricanes), you must c
 ------------------------------
 
 ## IMPORTANT: Submission instructions
-- Review [Grading Rubric](https://github.com/msyamkumar/cs220-s22-projects/blob/main/p5/Rubric.md), to ensure that you don't lose points during code review.
+- Review [Grading Rubric](https://github.com/msyamkumar/cs220-s22-projects/blob/main/p5/rubric.md), to ensure that you don't lose points during code review.
 - Please remember to **`Kernel->Restart and Run All`** to check for errors, save your notebook, then run the **`test.py`** script one more time before submitting the project.
     - To keep your code concise, please remove your own testing code that does not influence the correctness of answers.
     - __If you are unable to solve a question and have partial code that is causing an error__ when running test.py, please __comment out the lines in the cell for that question.__ Failing to do so will cause the auto-grader to fail when you submit your file and give you 0 points even if you have some questions correctly answered.
