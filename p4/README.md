@@ -2,6 +2,8 @@
 
 ### **Corrections and Clarifications**
 
+- 10:00PM, 2/17: The writeup erroneously stated that no Pokémon has a second type of `'Bug'` or `'Fire'`. We are issuing a temporary correction (in the description of `luap_battle`) and will make a detailed announcemement on Piazza soon.
+
 Find any issues? Report to us:
 
 - Joon ([jhuh23@wisc.edu](mailto:jhuh23@wisc.edu))
@@ -24,7 +26,7 @@ Please go through [lab-p4](https://github.com/msyamkumar/cs220-s22-projects/tre
 
 For this project, you'll be using the data from `pokemon_stats.csv` and `type_effectiveness_stats.csv` to simulate Pokémon battles. This data was gathered by the Python program `gen_csv.ipynb` from the website [https://www.pokemondb.net/](https://www.pokemondb.net/).
 
-- To start, download `project.py`, `test.py`, `type_effectiveness_stats.csv`, and `pokemon_stats.csv`.
+- To start, download `project.py`, `questions.py`, `test.py`, `type_effectiveness_stats.csv`, and `pokemon_stats.csv`.
 - You'll do your work in a Jupyter Notebook, producing a `main.ipynb` file.
 - You'll test as usual by running `python test.py` to test your `main.ipynb` file.
 
@@ -205,7 +207,9 @@ def effective_damage(attacker, defender):
     #TODO: compute the damage caused by attack, considering the higher bonus and return it
 ```
 
-`effective_damage` function definition must invoke the appropriate function from lab-p4 for the first step. **We'll manually deduct points** if you don't invoke the relevant function. Use the `effective_damage` function to answer the next three questions.
+`effective_damage` function definition must invoke the `get_num_types` function you wrote during lab. 
+Copy and paste it above your definition of `effective_damage`. **We'll manually deduct points** if you don't invoke `get_num_types`.   
+Use the `effective_damage` function to answer the next three questions.
 
 ### **#Q5: How much damage does Pikachu do to Haunter?**
 
@@ -296,9 +300,11 @@ def luap_battle(pkmn1, pkmn2):
     # TODO: Return the output of battle(pkmn1, pkmn2) only when the battle follows the LUAP guidelines.
     # TODO: If it does not follow the guidelines, output "Forbidden".
 ```
-`luap_battle` function definition must invoke the appropriate function from lab-p4 for determining whether Pokémons are from the same region. **We'll manually deduct points** if you don't invoke the relevant function.
+`luap_battle` function definition must invoke the function `same_region`, which you defined in lab-p4 to determine whether Pokémon are from the same region. Copy and paste `same_region` before your definition of `luap_battle`. **We'll manually deduct points** if you don't invoke `same_region`.
 
-Note: We only need to know the first type as there is no `'Fire'` or `'Bug'` in the second type. When the battle follows the LUAP guidlines, `luap_battle(pkmn1, pkmn2)` outputs the output of `battle(pkmn1, pkmn2)` else it outputs `Forbidden`. Please complete the `if` conditional in the above template then answer the following questions.
+Correction: A previous edition of this writeup said that there exist no Pokémon with `'Bug'` or `'Fire'` as a second type. For now, assume that `'Bug'` or `'Fire'` will never show up as a second type when we test `luap_battle`. Should this assumption change, we will issue an announcement on Piazza. Please look out for that.  
+
+When the battle follows the LUAP guidlines, `luap_battle(pkmn1, pkmn2)` outputs the output of `battle(pkmn1, pkmn2)` else it outputs `Forbidden`. Please complete the `if` conditional in the above template then answer the following questions.
 
 
 ### **#Q17: What is the output of luap_battle('Paras', 'Arcanine')?**
