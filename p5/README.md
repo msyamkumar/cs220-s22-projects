@@ -126,8 +126,10 @@ and "B" stands for billion!
 For example, your function should convert a string from "13.5M" to 13500000,
 "6.9K" to 6900 and so on.
 
-**Hint:** Use `float()` in the `format_damage` function for the numbers with
-decimal points before multiplying by `1000`, `1,000,000` or `1,000,000,000`. Convert the final computation back into a `int` using `int()` function. That is your final return value from `format_damage` should be of type `int`.
+**Note:** 
+- Use `float()` in the `format_damage` function for the numbers with decimal points before multiplying by `1000`, `1,000,000` or `1,000,000,000`. 
+- Convert the final computation back into a `int` using `int()` function. 
+- That is your final return value from `format_damage` should be of type `int`.
 
 ```python
 def format_damage(damage):
