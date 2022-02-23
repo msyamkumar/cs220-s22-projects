@@ -258,7 +258,7 @@ To break ties (multiple decades with the least number of hurricanes), you must c
 **Hints:** 
 - You **must use `get_number_of_days` function** that you defined in your lab. We'll manually deduct points, if you don't use this function.
 - Remember that `get_number_of_days(start_date, end_date)` will be negative if `start_date` occurs after `end_date`. 
-- Your job is to identify the index `idx` for which `get_number_of_days(deadliest_dissipation_date, project.get_formation(idx))` takes the smallest **positive** value.
+- Your job is to identify the index `idx` for which `get_number_of_days(deadliest_dissipation_date, project.get_formed(idx))` takes the smallest **positive** value.
 
 ------------------------------
 
