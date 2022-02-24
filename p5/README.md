@@ -3,6 +3,8 @@
 
 ## Corrections and clarifications
 
+- 2/24, 4:00PM: Q11, 15, 18, 20 were updated with initialization requirements
+
 **Find any issues?** Report to us:
 
 - Yiwu Zhong <yzhong52@wisc.edu>
@@ -67,6 +69,7 @@ The first cell should contain only contain information like this:
 # partner: NETID2
 # hours: ????
 ```
+All import statements should be in the second cell.
 
 ## Questions and functions
 
@@ -153,7 +156,7 @@ you should consider the **first** one you find.
 **Important:** To break ties (multiple hurricanes with same speed),
 you should consider the **first** one you find.
 
-Your answer should be an integer. For example, your answer should be `1000000` instead of `1M`.
+Your answer should be an integer. For example, your answer should be `1000000` instead of `"1M"`.
 
 **Hint:** If you find the index of the hurricane which did the most
 damage in Q9 instead of just the name of the hurricane,
@@ -165,6 +168,8 @@ you can solve Q10 very easily using the appropriate `project` module function (w
 functions you created in lab to your project notebook and use those functions. **We'll manually deduct points if you don't use those functions.**
 
 **Note:** Use the year of hurricane formation to identify the oldest hurricane. To break ties (multiple hurricanes with the same formation year), you must consider the **last** one in the data set.  
+
+**Requirement:** This is a minimization problem, so you will be using a variable to store the earliest year you've seen so far. Do *not* initialize this to **any positive number**. That would be considered hardcoding. Use `None`, `0` or some negative number as a default value.
 
 ---
 
@@ -202,6 +207,8 @@ If hurricanes were being added or removed to the `hurricanes.csv`, your code sho
 
 To break ties (multiple hurricanes with the same mph), you must consider the **last** one in the data set.  
 
+**Requirement:** This is a minimization problem, so you will be using a variable to store the minimum speed you've seen so far. Do *not* initialize this to **any positive number**. That would be considered hardcoding. Use `None`, `0` or some negative number as a default value.
+
 ---
 
 ### Function Suggestion:
@@ -231,11 +238,13 @@ def get_decade_total(start_of_decade):
 ```
 
 ### #Q18: Which decade in the 20th century suffered the least number of hurricanes?
-Your answer should be a string such as "1951 to 1960" or "1991 to 2000".
+Your answer should be a string such as "1951 to 1960" or "1991 to 2000".  
+
+**Requirement:** This is a minimization problem, so you will be using a variable to store the minimum number of hurricanes you've seen so far. Do *not* initialize this to **any positive number**. That would be considered hardcoding. Use `None`, `0` or some negative number as a default value.
 
 **Hints:**
 
-- You could use a `while` loop for iterating over decades or you can explore `range` built-in function further to determine how range can be used to generate sequence of start of the decades.
+- You can either use a `while` loop to iterate over decades or you can use a `for` loop with `range`. Look up `range` online, and you'll find that it has a feature that will be handy for this question.
 - You could invoke `get_decade_total` function.
 
 To break ties (multiple decades with the least number of hurricanes), you must consider the **last** one in the data set.  
@@ -256,8 +265,10 @@ To break ties (multiple decades with the least number of hurricanes), you must c
 
 **Hints:**
 - You **must use `get_number_of_days` function** that you defined in your lab. We'll manually deduct points, if you don't use this function.
-- Remember that `get_number_of_days(start_date, end_date)` will be negative if `start_date` occurs after `end_date`.
-- Your job is to identify the index `idx` for which `get_number_of_days(deadliest_dissipation_date, project.get_formed(idx))` takes the smallest **positive** value.
+- `get_number_of_days(start_date, end_date)` will be negative if `start_date` occurs after `end_date`.
+- Your job is to identify the index `idx` for which `get_number_of_days(deadliest_dissipation_date, project.get_formed(idx))` takes the smallest **positive** value.  
+
+**Requirement:** This is a minimization problem, so you will be using a variable to store the minimum delta you've seen so far. Do *not* initialize this to **any positive number**. That would be considered hardcoding. Use `None`, `0` or some negative number as a default value.
 
 ------------------------------
 
