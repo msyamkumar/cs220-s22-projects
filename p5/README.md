@@ -126,9 +126,9 @@ and "B" stands for billion!
 For example, your function should convert a string from "13.5M" to 13500000,
 "6.9K" to 6900 and so on.
 
-**Note:** 
-- Use `float()` in the `format_damage` function for the numbers with decimal points before multiplying by `1000`, `1,000,000` or `1,000,000,000`. 
-- Convert the final computation back into a `int` using `int()` function. 
+**Note:**
+- Use `float()` in the `format_damage` function for the numbers with decimal points before multiplying by `1000`, `1,000,000` or `1,000,000,000`.
+- Convert the final computation back into a `int` using `int()` function.
 - That is your final return value from `format_damage` should be of type `int`.
 
 ```python
@@ -177,7 +177,7 @@ def deadliest_in_range(year1, year2):
     Gets the index of the deadliest (most deaths) hurricane formed or dissipated within the given year range.
     year1 and year2 are inclusive bounds.
 
-    Returns the ID of the worst hurricane within the year range.
+    Returns the index of the worst hurricane within the year range.
     """
     pass
 ```
@@ -233,9 +233,9 @@ def get_decade_total(start_of_decade):
 ### #Q18: Which decade in the 20th century suffered the least number of hurricanes?
 Your answer should be a string such as "1951 to 1960" or "1991 to 2000".
 
-**Hints:** 
+**Hints:**
 
-- You could use a `while` loop for iterating over decades or you can explore `range` built-in function further to determine how range can be used to generate sequence of start of the decades. 
+- You could use a `while` loop for iterating over decades or you can explore `range` built-in function further to determine how range can be used to generate sequence of start of the decades.
 - You could invoke `get_decade_total` function.
 
 To break ties (multiple decades with the least number of hurricanes), you must consider the **last** one in the data set.  
@@ -244,8 +244,8 @@ To break ties (multiple decades with the least number of hurricanes), you must c
 
 ### #Q19: How many deaths were caused by hurricanes that lasted across at least 2 different months?
 
-**Hints:** 
-- You can compare the month the hurricane formed and the month it dissipated and you can get the number of deaths using the get_deaths function. 
+**Hints:**
+- You can compare the month the hurricane formed and the month it dissipated and you can get the number of deaths using the get_deaths function.
 - Make sure that your conditional properly accounts for hurricanes that got formed in the previous year and got dissipated in the next year.
 
 ---
@@ -254,9 +254,9 @@ To break ties (multiple decades with the least number of hurricanes), you must c
 
 **Important:** You may **not** assume that the hurricanes are in chronological order in the dataset.
 
-**Hints:** 
+**Hints:**
 - You **must use `get_number_of_days` function** that you defined in your lab. We'll manually deduct points, if you don't use this function.
-- Remember that `get_number_of_days(start_date, end_date)` will be negative if `start_date` occurs after `end_date`. 
+- Remember that `get_number_of_days(start_date, end_date)` will be negative if `start_date` occurs after `end_date`.
 - Your job is to identify the index `idx` for which `get_number_of_days(deadliest_dissipation_date, project.get_formed(idx))` takes the smallest **positive** value.
 
 ------------------------------
