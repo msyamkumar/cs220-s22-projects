@@ -4,6 +4,7 @@
 ## Corrections and clarifications
 
 - 2/24, 4:00PM: Q11, 15, 18, 20 were updated with initialization requirements
+- 2/25, 4:05PM: Q18, clarified tiebreaking
 
 **Find any issues?** Report to us:
 
@@ -247,7 +248,7 @@ Your answer should be a string such as "1951 to 1960" or "1991 to 2000".
 - You can either use a `while` loop to iterate over decades or you can use a `for` loop with `range`. Look up `range` online, and you'll find that it has a feature that will be handy for this question.
 - You could invoke `get_decade_total` function.
 
-To break ties (multiple decades with the least number of hurricanes), you must consider the **last** one in the data set.  
+To break ties (multiple decades with the least number of hurricanes), you must prefer the **later** decade.  
 
 ---
 
