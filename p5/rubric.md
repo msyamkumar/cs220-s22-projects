@@ -41,7 +41,6 @@ No requirement to check lowercase suffixes
 
 ## Q8
 -3 if they don't use or redefine `format_damage`  
--2 if they don't round to 2 decimal places  
 No deduction if they look for both 'G' and 'g'.  
 No deduction for not rounding.
 No requirements for initial index.  
