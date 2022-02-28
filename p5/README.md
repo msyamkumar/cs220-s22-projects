@@ -4,7 +4,8 @@
 ## Corrections and clarifications
 
 - 2/24, 4:00PM: Q11, 15, 18, 20 were updated with initialization requirements
-- 2/25, 4:05PM: Q18, clarified tiebreaking
+- 2/25, 4:05PM: Q18, clarified tiebreaking  
+- 2/28, 4:00PM: Q11, clarified use of `get_year`  
 
 **Find any issues?** Report to us:
 
@@ -165,10 +166,12 @@ you can solve Q10 very easily using the appropriate `project` module function (w
 
 ### Q11: Out of all hurricanes with more than 1000 deaths, what is the name of the hurricane that originated (formed) first?
 
-**Note:** You must copy the `get_month`, `get_day`, and `get_year`
-functions you created in lab to your project notebook and use those functions. **We'll manually deduct points if you don't use those functions.**
+**Corrected note:** You must copy the `get_year`
+function you created in lab to your project notebook and use it for this question.
+**We'll manually deduct points if you don't use `get_year`.**
+You must also copy over `get_day` and `get_month` as those may come in handy for later questions.
 
-**Note:** Use the year of hurricane formation to identify the oldest hurricane. To break ties (multiple hurricanes with the same formation year), you must consider the **last** one in the data set.  
+**Note:** Use *only* the year of hurricane formation to identify the oldest hurricane. To break ties (multiple hurricanes with the same formation year), you must consider the **last** one in the data set.   
 
 **Requirement:** This is a minimization problem, so you will be using a variable to store the earliest year you've seen so far. Do *not* initialize this to **any positive number**. That would be considered hardcoding. Use `None`, `0` or some negative number as a default value.
 
