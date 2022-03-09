@@ -1,4 +1,4 @@
-# Student Rubric for P5
+# Student Rubric for P6
 
 ## General deductions
 -2 for every instance where they don't use the `cell()` function to access a value in airbnb.csv (max deduction for 3+ violations: -5)  

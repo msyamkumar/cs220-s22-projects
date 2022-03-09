@@ -57,7 +57,7 @@ This segment is informational only and has no tasks.
 
 **Important:** It is your responsibility to make sure that your project clears auto-grader tests on our test system. Approximately 4 hours after you submit your program, auto-grader test results will become available.
 
-**Late days will be counted if your project does not clear auto-grader.** Your project will not be accept 7-days after the due date, *even if it was just an auto-grader failure.*
+**Late days will be counted if your project does not clear auto-grader.** Your project will not be accepted 7-days after the due date, *even if it was just an auto-grader failure.*
 
 If your project submission has successfully cleared auto-grader tests, you will see a `score` within the `Test Results` box of your submission (please see below screenshot). If you don't see `score` and see some error, that indicates that your submission did not clear auto-grader tests. It will be **your responsibility to visit office hours** and do the necessary follow-ups to make sure your project clears the auto-grader tests.
 

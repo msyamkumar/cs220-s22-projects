@@ -1,6 +1,13 @@
 # Project 6: Airbnb
 
 ## Corrections/ Clarifications
+3/7, 9:00AM: Made several updates:
+- Removed backticks from `find_room_names` TODO comments to prevent confusion with quotes
+- `secondary_word_in_found_rooms` should return a float between 0 and 100.
+- Q6: Anagrams are case-insensitive
+- Q7: Brooklyn is a neighborhood group
+- Q9: Added warning about Excel dates
+- Q17: Runtime is expected to be ~5 seconds. 
 
 **Find any issues?** Report to us:
 
@@ -104,8 +111,8 @@ def find_room_names(phrase):
     """
     pass
     # TODO: create a list
-    # TODO: Ignore rooms that do not have data entry for `name`, as indicated by a value of `None`.
-    # TODO: check if the room name string contains `phrase` (case insensitive match)
+    # TODO: Ignore rooms that do not have data entry for name, as indicated by a value of None.
+    # TODO: check if the room name string contains phrase (case insensitive match)
     # TODO: if so, add these room names to the list (the room names should not be modified)
     # TODO: return your list of room names
 ```
@@ -126,13 +133,15 @@ For reference, an anagram is a word or phrase formed by rearranging the letters 
 
 **Note:** Your output should be in the form of a Python list. The order doesn't matter but make sure that your answer doesn't contain duplicate entries.
 
-**Important:** Ignore room ids that do not have data entry for `host_name`, as indicated by a value of `None`.
+**Important:** Ignore room ids that do not have data entry for `host_name`, as indicated by a value of `None`.  
+
+**Clarification:** We expect matches to be case-insensitive.
 
 **Hint:** Checking whether a single word is an anagram of another word does not require writing a loop. So if you're writing something complicated, review task 3.3 in lab-p6.
 
 ---
 
-### #Q7: List all room ids that received more than 400 reviews in "Brooklyn".
+### #Q7: List all room ids that received more than 400 reviews in the Brooklyn neighborhood group.
 
 **Note:** Your answer should be in the form of a Python list of strings.
 
@@ -144,7 +153,9 @@ For reference, an anagram is a word or phrase formed by rearranging the letters 
 
 ### #Q9: Which shared room ids in Queens neighborhood group received their last review in the year 2016 or earlier?
 
-**Note:** Your answer should be in the form of a Python list of strings.
+**Note:** Your answer should be in the form of a Python list of strings.  
+
+**Warning:** If you open the csv in Excel, Excel will try to convert the dates to the MM/DD/YYYY format instead of the expected YYYY-MM-DD format. Do *not* save the csv if you open it in Excel. You must use the YYYY-MM-DD format for this question.
 
 **Important:** Ignore room ids that do not have an entry for `last_review`, as indicated by a value of `None`.
 
@@ -241,6 +252,8 @@ def find_prices_within(lat_min, lat_max, long_min, long_max):
 2. Then find which of these neighborhoods has the highest average ratio. If you wrote a function for Q15 and Q16 that will be helpful here.
 3. If the program is taking too long to execute, make sure you are not running the logic on duplicate neighborhoods. 
 
+**Clarification:** The runtime of this cell is expected to be around 5 seconds. Don't worry about this.
+
 ---
 
 ### `secondary_word_in_found_rooms` function:
@@ -254,6 +267,7 @@ def secondary_word_in_found_rooms(find_room_word, secondary_word):
     """
     Returns the percentage of names containing one word find_room_word (case insensitive match)
     that also contains another word secondary_word (case insensitive match).
+    Return value is between 0 and 100.
     """    
     # Hint: The denominator is the number of rooms with find_room_word in their name. 
     #       The numerator is the number of rooms that have both find_room_word and secondary_word in their name.
@@ -262,11 +276,11 @@ def secondary_word_in_found_rooms(find_room_word, secondary_word):
 
 ### #Q18: What percentage of rooms whose names contain the word "quiet" also contain the word "clean"?
 
-**Note:** Your answer should be a float value. You are expected to use the function `secondary_word_in_found_rooms` here.
+**Note:** Your answer should be a float value between 0 and 100. You are expected to use the function `secondary_word_in_found_rooms` here.
 
 ### #Q19: What percentage of rooms whose names contain the word "sunny" also contain the word "beautiful"?
 
-**Note:** Your answer should be a float value. You are expected to use the function `secondary_word_in_found_rooms` here.
+**Note:** Your answer should be a float value between 0 and 100. You are expected to use the function `secondary_word_in_found_rooms` here.
 
 ---
 ### #Q20: What is the minimum amount of money one needs to spend to stay for 3 days in Queens, and then 4 days in Brooklyn?
