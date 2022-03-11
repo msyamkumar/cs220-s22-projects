@@ -215,9 +215,9 @@ We will create a **dictionary of dictionaries** called `vaccination_stats` to st
 To reiterate, `vaccination_stats` should be a dictionary where the keys are `country` names. The values should be dictionaries with the keys being the different `date`. The values of these keys should be dictionaries like the one below.
 
 ```python
->>> vaccination_stats['Albania']['01/30/22']
+>>> vaccination_stats['Albania']['01/30/2022']
 {'country': 'Albania',
- 'date': '01/30/22',
+ 'date': '01/30/2022',
  'daily_vaccinations': 'None',
  'total_vaccinations': 2523683,
  'people_vaccinated': 1210040,
