@@ -2,6 +2,7 @@
 
 
 ## Corrections & Clarifications
+* 3/10 9:30PM: Requirements and rubric for Q19 and Q20 are updated.
 
 **Find any issues?** Report to us,
 
@@ -304,7 +305,9 @@ Your answer should be a **dict** mapping each country to the ratio. If the ratio
 
 ### #Q19: What is the percentage of population boosted by Jan 31, 2022 of each country in the dataset?
 
-Your answer should be a `dict` mapping each country to the percentage of population boosted by the end of the week. For countries that have no data for `total_boosters` or `population`, the value should be `None`.
+Your answer should be a `dict` mapping each country to the percentage of population boosted by the end of the week.  
+
+**Correction**: A previous version of this README required that countries with no data have a value of `None` for this question. The answer in `questions.py` contradicted this. To match the answer in `questions.py`, we are now requiring that you **omit countries that have no data for `total_boosters` or `population`**.
 
 **Requirements:**
 - Use the data structure `vaccination_stats` to extract all the data you need for this question.
@@ -319,9 +322,10 @@ Your answer should be a `dict` mapping each country to the percentage of populat
 The expected answer is an `int` that represents the rank (e.g., 3 for 3rd, with 1 being the highest). Do not hardcode anything except for the name of the country.
 
 **Requirements:**
-- Use the data structure `vaccination_stats` to extract all the data you need for this question.
+- Use the `dict` data structure from Q19. You must iterate over the entire `dict` to compute the rank.
 - You **are not allowed** to use `sorted()` or `.sort()` in this problem.
-- Use the `dict` data structure from Q19. You must iterate over the entire `dict`, to compute the rank.
+
+**Correction:** A previous version of this README required that you use `vaccination_stats` to answer this question. This requirement has been removed because the data from the Q19 `dict` is sufficient. However, if you used `vaccination_stats` to answer Q20, no points will be deducted.
 
 ------------------------------
 

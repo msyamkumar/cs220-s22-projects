@@ -78,11 +78,11 @@ vaccination_stats # a dict of dicts
 
 ## Q13
 -5 if answer is hardcoded without working code.  
--2 if `vaccination_stats` is not used (deduct only if `vaccination_stats` was created)  
+-2 if `vaccination_stats` is not used (deduct only if `vaccination_stats` was created)  \
 
 ## Q14
 -5 if answer is hardcoded without working code.  
--2 if `vaccination_stats` is not used (deduct only if `vaccination_stats` was created)  
+-2 if `vaccination_stats` is not used (deduct only if `vaccination_stats` was created)  \
 
 ## Q15
 -5 if answer is hardcoded without working code.  
@@ -115,6 +115,5 @@ vaccination_stats # a dict of dicts
 
 ## Q20
 -5 if answer is hardcoded without working code.  
--2 if `vaccination_stats` is not used (deduct only if `vaccination_stats` was created)  \
 -3 if they use sort() or sorted()  \
--3 if they don't use the `dict` from Q19  
+-3 if they don't use the `dict` from Q19 OR `vaccination_stats`
