@@ -62,7 +62,7 @@ import pandas
 
 - Finally, copy the functions you wrote from P8 to `main.ipynb`. As a reminder, the functions you should include are `process_csv`, `get_mapping`, `get_raw_movies`, `get_movies`  along with any helper functions you used to write these.
 
-- In Q14 of [**P8**](https://github.com/msyamkumar/cs220-s22-projects/blob/main/p8/), you used `copy` module to pass a copy of a list to `find_specific_movies`. This prevented the list from being modified by `find_specific_movies`. However, using `copy` frequently is not a good coding practice. For this project, we will provide **a new version** of `find_specific_movies` that does not require `copy`. Please copy & paste the following into your notebook:
+- In [Q14 of P8](https://github.com/msyamkumar/cs220-s22-projects/tree/main/p8#q14-list-all-the-movies-in-the-dataset-that-greta-gerwig-has-directed), you used `copy` module to pass a copy of a list to `find_specific_movies`. This prevented the list from being modified by `find_specific_movies`. However, using `copy` frequently is not a good coding practice. For this project, we will provide **a new version** of `find_specific_movies` that does not require `copy`. Please copy & paste the following into your notebook:
 
 ```python
 def find_specific_movies(movies, keyword):
