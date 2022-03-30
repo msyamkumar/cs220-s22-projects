@@ -1,6 +1,7 @@
 # Project 8: Going to the Movies
 
 ## Clarifications/Corrections
+- 3/24, 11:30AM: Minor Q14 requirement correction
 
 **Find any issues?** Report to us:
 - Rheeya Uppaal [uppaal@wisc.edu](mailto:uppaal@wisc.edu)
@@ -309,7 +310,7 @@ This is undesirable, as we need to retain the original data structure. Review th
 - Use `find_specific_movies` to answer this question.
 - Do not change `find_specific_movies`
 - Use the `copy` module to pass a copy of `movies` to `find_specific_movies`
-- Only include movies where Greta is an actor
+- Only include movies where Greta is a director
 
 
 **Hint:** `find_specific_movies` returns the movies that are directed or acted by "Greta Gerwig". Make sure to use appropriate loop structures (for/while loop) to retrieve only the movies that are *directed* by "Greta Gerwig".
