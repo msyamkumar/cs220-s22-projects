@@ -34,7 +34,7 @@ Remember that coding style matters! **Points may be deducted for bad coding styl
 
 In P8, you created very useful helper functions to parse the raw IMDb dataset. In this project, you will be using the work you did in P8 to load and analyze the data.
 
-- Start by downloading the following files: [`test.py`](https://github.com/msyamkumar/cs220-s22-projects/blob/main/p9/test.py), [`questions.py`](https://github.com/msyamkumar/cs220-s22-projects/blob/main/p9/questions.py)[`mapping.csv`](https://github.com/msyamkumar/cs220-s22-projects/blob/main/p8/mapping.csv), and [`movies.csv`](https://github.com/msyamkumar/cs220-s22-projects/blob/main/p8/movies.csv) (Click file names to download).
+- Start by downloading the following files: [`test.py`](https://github.com/msyamkumar/cs220-s22-projects/blob/main/p9/test.py), [`questions.py`](https://github.com/msyamkumar/cs220-s22-projects/blob/main/p9/questions.py), [`mapping.csv`](https://github.com/msyamkumar/cs220-s22-projects/blob/main/p8/mapping.csv), and [`movies.csv`](https://github.com/msyamkumar/cs220-s22-projects/blob/main/p8/movies.csv) (Click file names to download).
 
 - For the **first cell**, please copy & paste the below and replace NETID1, NETID2 with your and your partner's NetID.
 
