@@ -109,7 +109,6 @@ bucketize(movie_list, category) # returns dict of lists
 ## Q14
 -5 if answer is hardcoded without working code.    
 -1 if the variable from Q12 is not used       
--2 if `median()` function is not used       
 
 ## Q15
 -5 if answer is hardcoded without working code.    
