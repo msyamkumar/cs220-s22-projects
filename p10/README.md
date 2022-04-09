@@ -428,6 +428,8 @@ Your output should be a **list** of video titles. Note that a Minecraft tag is n
 
 ### #Q20: List the titles of the 5 shortest videos.
 
+**Announcement:** At midnight on 4/9, a bug in `questions.py` and `test.py` was fixed. This bug could have caused you to fail Q20 unfairly. Please redownload both files if you have issues with this question.
+
 Your output should be a list of 5 video titles sorted in increasing order of their durations.
 
 **Requirements:**
