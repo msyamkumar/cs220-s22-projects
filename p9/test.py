@@ -32,19 +32,19 @@ LINTER = False  # set to False if linter should be turned off for project
 
 #REQUIRED_FILES = [] defined in questions.py
 
-PASS = "PASS"
-TEXT_FORMAT = "text"  # question type when expected answer is a str, int, float, or bool
-TEXT_FORMAT_NAMEDTUPLE = "text namedtuple"  # question type when expected answer is a namedtuple
-TEXT_FORMAT_UNORDERED_LIST = "text list_unordered"  # question type when the expected answer is a list where the order does *not* matter
-TEXT_FORMAT_ORDERED_LIST = "text list_ordered"  # question type when the expected answer is a list where the order does matter
-TEXT_FORMAT_ORDERED_LIST_NAMEDTUPLE = "text list_ordered namedtuple"  # question type when the expected answer is a list of namedtuples where the order does matter
-TEXT_FORMAT_SPECIAL_ORDERED_LIST = "text list_special_ordered"  # question type when the expected answer is a list where order does matter, but with possible ties. All tied elements are put in a list, where internal order does not matter.
-TEXT_FORMAT_DICT = "text dict"  # question type when the expected answer is a dictionary
-TEXT_FORMAT_LIST_DICTS_ORDERED = "text list_dicts_ordered"  # question type when the expected answer is a list of dicts where the order does matter
-PNG_FORMAT = "png"  # use when the expected answer is an image
-HTML_FORMAT = "html"
-FILE_FORMAT = "file"
-FILE_JSON_FORMAT = "file json"
+# PASS = "PASS"
+# TEXT_FORMAT = "text"  # question type when expected answer is a str, int, float, or bool
+# TEXT_FORMAT_NAMEDTUPLE = "text namedtuple"  # question type when expected answer is a namedtuple
+# TEXT_FORMAT_UNORDERED_LIST = "text list_unordered"  # question type when the expected answer is a list where the order does *not* matter
+# TEXT_FORMAT_ORDERED_LIST = "text list_ordered"  # question type when the expected answer is a list where the order does matter
+# TEXT_FORMAT_ORDERED_LIST_NAMEDTUPLE = "text list_ordered namedtuple"  # question type when the expected answer is a list of namedtuples where the order does matter
+# TEXT_FORMAT_SPECIAL_ORDERED_LIST = "text list_special_ordered"  # question type when the expected answer is a list where order does matter, but with possible ties. All tied elements are put in a list, where internal order does not matter.
+# TEXT_FORMAT_DICT = "text dict"  # question type when the expected answer is a dictionary
+# TEXT_FORMAT_LIST_DICTS_ORDERED = "text list_dicts_ordered"  # question type when the expected answer is a list of dicts where the order does matter
+# PNG_FORMAT = "png"  # use when the expected answer is an image
+# HTML_FORMAT = "html"
+# FILE_FORMAT = "file"
+# FILE_JSON_FORMAT = "file json"
 
 #defined in questions.py
 #Question = collections.namedtuple("Question", ["number", "weight", "format"])
@@ -169,7 +169,8 @@ def check_cell_text(qnum, cell, format):
         elif format == TEXT_FORMAT_UNORDERED_LIST:
             return list_compare_unordered(expected, actual)
         elif format == TEXT_FORMAT_SPECIAL_ORDERED_LIST:
-            return list_compare_special(expected, actual, special_order_json[str(qnum)])
+            return list_compare_special(expected, actual)
+            #return list_compare_special(expected, actual, special_order_json[str(qnum)])
         elif format == TEXT_FORMAT_DICT:
             return dict_compare(expected, actual)
         elif format == TEXT_FORMAT_LIST_DICTS_ORDERED:
@@ -301,17 +302,42 @@ def list_compare_unordered(expected, actual, obj="list"):
                                                                                                sort_expected)
     return msg
 
-def list_compare_special_init(expected, special_order):
-    real_expected = []
-    for i in range(len(expected)):
-        if real_expected == [] or special_order[i-1] != special_order[i]:
-            real_expected.append([])
-        real_expected[-1].append(expected[i])
-    return real_expected
+# def list_compare_special_init(expected, special_order):
+#     real_expected = []
+#     for i in range(len(expected)):
+#         if real_expected == [] or special_order[i-1] != special_order[i]:
+#             real_expected.append([])
+#         real_expected[-1].append(expected[i])
+#     return real_expected
+#
+#
+# def list_compare_special_2(expected, actual, special_order):
+#     expected = list_compare_special_init(expected, special_order)
+#     msg = PASS
+#     expected_list = []
+#     for expected_item in expected:
+#         expected_list.extend(expected_item)
+#     val = list_compare_unordered(expected_list, actual)
+#     if val != PASS:
+#         msg = val
+#     else:
+#         i = 0
+#         for expected_item in expected:
+#             j = len(expected_item)
+#             actual_item = actual[i: i + j]
+#             val = list_compare_unordered(expected_item, actual_item)
+#             if val != PASS:
+#                 if j == 1:
+#                     msg = "at index %d " % (i) + val
+#                 else:
+#                     msg = "between indices %d and %d " % (i, i + j - 1) + val
+#                 msg = msg + " (list may not be ordered as required)"
+#                 break
+#             i += j
+#
+#     return msg
 
-
-def list_compare_special(expected, actual, special_order):
-    expected = list_compare_special_init(expected, special_order)
+def list_compare_special(expected, actual):
     msg = PASS
     expected_list = []
     for expected_item in expected:
@@ -323,13 +349,13 @@ def list_compare_special(expected, actual, special_order):
         i = 0
         for expected_item in expected:
             j = len(expected_item)
-            actual_item = actual[i: i + j]
+            actual_item = actual[i: i+j]
             val = list_compare_unordered(expected_item, actual_item)
             if val != PASS:
                 if j == 1:
                     msg = "at index %d " % (i) + val
                 else:
-                    msg = "between indices %d and %d " % (i, i + j - 1) + val
+                    msg = "between indices %d and %d " % (i, i+j-1) + val
                 msg = msg + " (list may not be ordered as required)"
                 break
             i += j
