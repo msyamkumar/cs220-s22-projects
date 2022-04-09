@@ -3,8 +3,8 @@
 
 ## Corrections/Clarifications
 
-
-None yet.
+- 4/9, 12:10AM: A minor bug was fixed in test.py and questions.py for Q20
+    - We don't believe anyone was affected by this, but please redownload both files if you fail Q20 unexpectedly.
 
 **Find any issues?** Report to us:
 
@@ -183,7 +183,7 @@ You will need to create a `namedtuple` to represent a `Comment`. This should hav
 
 Now, parse the `comment_data` files and make `Comment` objects out of them. You should define a function `get_comment_data` that takes in the path of a csv file as its input and returns a dict mapping comment IDs to Comment objects. Some starter code is given for you.
 
-**Requirements:** 
+**Requirements:**
 - Simply **ignore** any row that has a cell with an empty string. (See below description)
 - `comment_length` and `likes` field should be of type `int` when you create `Comment` object instance.
 
@@ -193,14 +193,14 @@ Now, parse the `comment_data` files and make `Comment` objects out of them. You 
 # If you already copy/pasted it from lab, please ignore this copy.
 def process_csv(filename):
     exampleFile = open(filename, encoding="utf-8")  
-    exampleReader = csv.reader(exampleFile) 
+    exampleReader = csv.reader(exampleFile)
     exampleData = list(exampleReader)        
     exampleFile.close()  
-    return exampleData 
+    return exampleData
 
 def get_comment_data(comment_file):
     csv_data = process_csv(comment_file)
-    header = csv_data[0] 
+    header = csv_data[0]
     # TODO: if required, use a print function call to display header or alternatively, take a look at the comments csv file
     comment_rows = csv_data[1:]
     comment_id_idx = header.index("comment_id")
@@ -223,13 +223,13 @@ def get_comment_data(comment_file):
 ['UgxqInn43ZA8HICsaCN4AaABAg', 'ymXnK6UX5zE', '34', '', '0', '2021-10-10 09:39:07']
 ```
 
-The first two comments are missing their `comment_length`, and the third comment is missing its `author_id`. 
+The first two comments are missing their `comment_length`, and the third comment is missing its `author_id`.
 
 ### #Q7: What is the Comment object with comment ID `UgygOezB4Mvd5o6FgAt4AaABAg`?
 
 This comment is in the `data` directory within the file `comment_data1.csv`. You may use this in your code.
 
-**Requirements:** 
+**Requirements:**
 - Use the function `get_comment_data`
 - Do not hardcode slashes ('/' or '\\') in your path
    - *Warning*: if you do not follow this, your code will not clear auto-grader.
@@ -289,7 +289,7 @@ There is a unique comment with the highest number of likes. So, you don't have t
 
 ### #Q11: What is the most popular hour for publishing comments?
 
-Your answer should be an int representing the hour of the day. 
+Your answer should be an int representing the hour of the day.
 
 *Hint*: String slicing may be useful here.
 

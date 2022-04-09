@@ -199,7 +199,8 @@ def check_cell_text(qnum, cell, format):
         elif format == TEXT_FORMAT_UNORDERED_LIST:
             return list_compare_unordered(expected, actual)
         elif format == TEXT_FORMAT_SPECIAL_ORDERED_LIST:
-            return list_compare_special(expected, actual, special_order_json[str(qnum)])
+            return list_compare_special(expected, actual)
+            #return list_compare_special(expected, actual, special_order_json[str(qnum)])
         elif format == TEXT_FORMAT_DICT:
             return dict_compare(expected, actual)
         elif format == TEXT_FORMAT_LIST_DICTS_ORDERED:
@@ -331,17 +332,42 @@ def list_compare_unordered(expected, actual, obj="list"):
                                                                                                sort_expected)
     return msg
 
-def list_compare_special_init(expected, special_order):
-    real_expected = []
-    for i in range(len(expected)):
-        if real_expected == [] or special_order[i-1] != special_order[i]:
-            real_expected.append([])
-        real_expected[-1].append(expected[i])
-    return real_expected
+# def list_compare_special_init(expected, special_order):
+#     real_expected = []
+#     for i in range(len(expected)):
+#         if real_expected == [] or special_order[i-1] != special_order[i]:
+#             real_expected.append([])
+#         real_expected[-1].append(expected[i])
+#     return real_expected
+#
+#
+# def list_compare_special(expected, actual, special_order):
+#     expected = list_compare_special_init(expected, special_order)
+#     msg = PASS
+#     expected_list = []
+#     for expected_item in expected:
+#         expected_list.extend(expected_item)
+#     val = list_compare_unordered(expected_list, actual)
+#     if val != PASS:
+#         msg = val
+#     else:
+#         i = 0
+#         for expected_item in expected:
+#             j = len(expected_item)
+#             actual_item = actual[i: i + j]
+#             val = list_compare_unordered(expected_item, actual_item)
+#             if val != PASS:
+#                 if j == 1:
+#                     msg = "at index %d " % (i) + val
+#                 else:
+#                     msg = "between indices %d and %d " % (i, i + j - 1) + val
+#                 msg = msg + " (list may not be ordered as required)"
+#                 break
+#             i += j
+#
+#     return msg
 
-
-def list_compare_special(expected, actual, special_order):
-    expected = list_compare_special_init(expected, special_order)
+def list_compare_special(expected, actual):
     msg = PASS
     expected_list = []
     for expected_item in expected:
@@ -353,13 +379,13 @@ def list_compare_special(expected, actual, special_order):
         i = 0
         for expected_item in expected:
             j = len(expected_item)
-            actual_item = actual[i: i + j]
+            actual_item = actual[i: i+j]
             val = list_compare_unordered(expected_item, actual_item)
             if val != PASS:
                 if j == 1:
                     msg = "at index %d " % (i) + val
                 else:
-                    msg = "between indices %d and %d " % (i, i + j - 1) + val
+                    msg = "between indices %d and %d " % (i, i+j-1) + val
                 msg = msg + " (list may not be ordered as required)"
                 break
             i += j
