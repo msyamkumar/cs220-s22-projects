@@ -5,7 +5,7 @@
 - -4 for hardcoding indices (max deduction for 3+ violations: -10)  
 - Upto -5 for displaying excessive irrelevant information or test code  
 - -3 if they use any "advanced" stuff like `numpy` (the only modules that can be imported are `csv`, `copy`, `pandas` and `matplotlib`)   
-- -2 if they use `matplotlib` and `pandas` for any purpose other than plotting. 
+- -2 if they use `matplotlib` and `pandas` for any purpose other than plotting.
 - -2 for each instance of not using a required function (max deductions for 6+ violations: -10)   
 - -3 if the students loop through a dictionary to get the value of a key instead of just accessing that key's value (max deductions for 4+ violations: -10)  
 - -1 to -3 for incorrect logic. Logic incorrectness depends on how different written code is from what is asked in the project description for some segment (function, question, data structure etc.)   
@@ -23,10 +23,10 @@ get_movies(movies_path, mapping_path) # returns a
 #P9:
 find_specific_movies(movies, keyword) # returns a list
 plot_dict(d, label = "Please label me") # plots d  
-median(list) # returns a float (or int) 
-year_to_decade(year) # returns a string 
+median(list) # returns a float (or int)
+year_to_decade(year) # returns a string
 max_rated_movies(movie_list) # returns list of dicts  
-bucketize(movie_list, category) # returns dict of lists 
+bucketize(movie_list, category) # returns dict of lists
 ```
 
 ## Q1       
@@ -44,7 +44,7 @@ bucketize(movie_list, category) # returns dict of lists
 ## Q3
 -5 if answer is hardcoded without working code.  
 -2 for hardcoding an initial value besides 0 for min rating  
--3 to -1 if answer is found using incorrect logic (any logic in which lowest rating is not found) 
+-3 to -1 if answer is found using incorrect logic (any logic in which lowest rating is not found)
 
 ## Q4
 -5 if answer is hardcoded without working code.  
@@ -107,6 +107,7 @@ bucketize(movie_list, category) # returns dict of lists
 -1 if the y-axis label is not "median rating"     
 
 ## Q14
+TA NOTE: Report to saurabh if a student failed this test
 -5 if answer is hardcoded without working code.    
 -1 if the variable from Q12 is not used       
 
@@ -123,18 +124,19 @@ bucketize(movie_list, category) # returns dict of lists
 -2 if `actor_buckets` is not used   
 
 ## Q18
+TA NOTE: Report to saurabh if a student failed this test
 -5 if answer is hardcoded without working code.         
 -2 if `director_buckets` is not used  
 -2 if student doesn't check that movie contains both `Action` and `Adventure` genres      
 
 ## Q19
+TA NOTE: Report to saurabh if a student failed this test
 -5 if answer is hardcoded without working code.         
 -2 if `genre_buckets` is not used  
-    
+
 ## Q20
+TA NOTE: Report to saurabh if a student failed this test
 -5 if answer is hardcoded without working code.         
 -3 if `actor_buckets` is not used  
 -2 if `median()` function is not used  
 -2 if it's not checked that an actor acted in at least 15 movies      
-
-
