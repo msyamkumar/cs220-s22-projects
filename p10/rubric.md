@@ -18,6 +18,7 @@
 ```python
 # functions
 list_files_in(directory) # returns a list
+list_paths_in(directory) # returns a list
 get_mapping(mapping_file_path): # returns a dict
 get_comment_data(comment_file) # returns a dict
 get_videos(video_data, mapping_data) # returns a dict
@@ -39,7 +40,7 @@ channel_buckets # dict for Q17
 -1 if files are not sorted          
 
 ## Q2
--2 if answer from Q1 or `list_files_in()` is not used         
+-2 if answer from Q1 or `list_paths_in` or `list_files_in` is not used              
 -3 if `os.path.join()` is not used.         
 -2 if paths are not relative to `main.ipynb` (ensure that your directory structure is as per the [requirements](https://github.com/msyamkumar/cs220-s22-projectDesign/tree/p10-saurabh/p10#requirements)      
 
@@ -88,7 +89,7 @@ No requirement to save this result to a variable
 
 ## Q8, Q9, Q10, Q11            
 -2 if `comments` dict is not used           
--1 if indices are used instead of named attributes to access values from `Comment` namedtuple objects 
+-1 if indices are used instead of named attributes to access values from `Comment` namedtuple objects
 
 ## comment_buckets data structure:   
 -5 if `comment_buckets` is not created (deduct only once)   
