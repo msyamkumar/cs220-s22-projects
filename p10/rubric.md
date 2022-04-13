@@ -8,7 +8,7 @@
 - -3 for each instance of not using a required function (max deductions for 4+ violations: -10)   
 - -3 if the students loop through a dictionary to get the value of a key instead of just accessing that key's value (max deductions for 4+ violations: -10)  
 - -1 to -3 for incorrect logic. Logic incorrectness depends on how different written code is from what is asked in the project description for some segment (function, question, data structure etc.)   
-- -1 for the project if bad coding practices are used. Refer to [Coding Style Requirements](https://github.com/msyamkumar/cs220-s22-projectDesign/tree/p10-saurabh/p10#coding-style-requirements) to understand few instances of bad coding practice
+- -1 for the project if bad coding practices are used. Refer to [Coding Style Requirements](https://github.com/msyamkumar/cs220-s22-projects/tree/master/p10#coding-style-requirements) to understand few instances of bad coding practice
 - Do not deduct from a question if it has already failed the autograder   
 
 ## P10 specific guidelines:
@@ -42,7 +42,7 @@ channel_buckets # dict for Q17
 ## Q2
 -2 if answer from Q1 or `list_paths_in` or `list_files_in` is not used              
 -3 if `os.path.join()` is not used.         
--2 if paths are not relative to `main.ipynb` (ensure that your directory structure is as per the [requirements](https://github.com/msyamkumar/cs220-s22-projectDesign/tree/p10-saurabh/p10#requirements)      
+-2 if paths are not relative to `main.ipynb` (ensure that your directory structure is as per the [requirements](https://github.com/msyamkumar/cs220-s22-projects/tree/master/p10#requirements)      
 
 ## Q3           
 -2 if Q2 answer is not used        
