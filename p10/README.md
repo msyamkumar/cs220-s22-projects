@@ -6,6 +6,7 @@
 - 4/9, 12:10AM: A minor bug was fixed in test.py and questions.py for Q20
     - We don't believe anyone was affected by this, but please redownload both files if you fail Q20 unexpectedly.
 - 4/12, 10:15AM: The rubric was corrected to mention `list_paths_in`. However, due to our error, we will accept any of the 3 options now mentioned in the rubric.
+- 4/12: 8:25PM: For Q19, do a case-insensitive match when checking if a tag contains "minecraft"
 
 **Find any issues?** Report to us:
 
@@ -418,7 +419,9 @@ Your output should be a list of 5 channel names sorted in **decreasing order of 
 
 ### #Q19: List all the unique video titles which have Minecraft tags.
 
-Your output should be a **list** of video titles. Note that a Minecraft tag is not just a tag that says 'minecraft'. It is any tag that **contains the substring 'minecraft'**, such as the tag 'minecraft funny'.
+Your output should be a **list** of video titles. Note that a Minecraft tag is not just a tag that says 'minecraft'. It is any tag that **contains the substring 'minecraft'**, such as the tag 'minecraft funny'.  
+
+**Correction**: Do a case-insensitive match when checking if a tag contains "minecraft".
 
 **Requirements:**
 - Use `bucketize`, and store the result to `tag_buckets`
