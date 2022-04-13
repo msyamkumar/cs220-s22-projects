@@ -17,6 +17,7 @@ In this lab, you will practice...
 Create a `lab11` directory and download the following files into the `lab11` directory.
 
 * `data.zip`
+* `broken_file.zip`
 * `practice.ipynb`
 
 After downloading data.zip, make sure to extract it (using [Mac directions](http://osxdaily.com/2017/11/05/how-open-zip-file-mac/) or [Windows directions](https://support.microsoft.com/en-us/help/4028088/windows-zip-and-unzip-files)). After extracting, you should see a folder called data, which has the following files in it:
@@ -38,6 +39,15 @@ After downloading data.zip, make sure to extract it (using [Mac directions](http
 * video_ids.json
 
 You may delete `data.zip` after extracting these files from it.
+
+Then extract `broken_file.zip`. You should see a folder called `broken_file` that contains:
+* english_lowercase
+* english_uppercase
+* non_english
+* special
+* number.json
+
+You may delete `broken_file.zip` after extracting these files from it.
 
 ## Segments 1-3: 
 For the remaining segments, detailed instructions are provided in `practice.ipynb`. From the terminal, open a `jupyter notebook` session, open your `practice.ipynb`, and follow the instructions in `practice.ipynb`.
