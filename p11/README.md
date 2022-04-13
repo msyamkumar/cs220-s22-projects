@@ -693,7 +693,6 @@ in alphabetical order** and should exclude any files or directories with names *
 
 
 **Requirements:**
-- Use `list_paths_in` in `get_all_paths_in`
 - Use `get_all_paths_in` for Q14 to Q17.
 
 
