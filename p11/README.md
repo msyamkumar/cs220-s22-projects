@@ -631,7 +631,7 @@ the link can still make comments before the video is published.
 **Requirements:**
 - Use `scatter`
 - Use `time_delta`
-- Label the horizontal axis as "comment length" and the vertical axis as "likes"
+- Label the horizontal axis as "days after the video was published" and the vertical axis as "likes"
 
 *Hint:* Create 2 lists - one for time deltas and one for likes. Go through `videos`, and for each of the comments, get the time delta and the number of likes. Append each of those values to the appropriate lists.
 
@@ -657,7 +657,7 @@ Now, we know that if we want to get lots of likes on our comments, we have to po
 Your output should be a **scatter** plot. Each comment should be represented as a point on the graph with the horizontal axis representing the time between when the video was published and when the comment was published, and the vertical axis representing the length of the comment text.
 
 **Requirements:**
-- Label the horizontal axis as "comment length" and the vertical axis as "likes"
+- Label the horizontal axis as "days after the video was published" and the vertical axis as "length of comments"
 - Use `scatter`
 - Use `time_delta`
 
