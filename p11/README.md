@@ -5,7 +5,8 @@
 4/13, 11:30PM:
 - A **major bug** was detected in the plot for Q3. The verification script and the image have been changed accordingly.
 - The x and y axes were flipped for the verification script for Q8 and Q9. They have been corrected.
-- To get the fixes, please **redownload** `plot_points.json` from the github repo. The version inside `p11.zip` has also been updated.
+- To get the fixes, please **redownload** `plot_points.json` from the github repo. The version inside `p11.zip` has also been updated.  
+
 4/14, 12:30PM:
 - This README previously referred to the data structure that mapped comment ids to Comment objects as `comment_data` instead of `comments`. The correct name is `comments`.
 
