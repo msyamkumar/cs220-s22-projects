@@ -2,7 +2,10 @@
 
 ## Clarifications/Corrections
 
-None yet.
+4/13, 11:30PM:
+- A **major bug** was detected in the plot for Q3. The verification script and the image have been changed accordingly.
+- The x and y axes were flipped for the verification script for Q8 and Q9. They have been corrected.
+- To get the fixes, please **redownload** `plot_points.json` from the github repo. The version inside `p11.zip` has also been updated.
 
 **Find any issues?** Report to us:  
 
@@ -397,13 +400,13 @@ Your plot should look like:
 
 <img src="plot-examples/q3.png" width="400">
 
-This is interesting! So, here is your second lesson for the day: **Publish your videos early in the morning**.  
+**CORRECTION:** A previous version (before 4/13, 11:30PM) of this README had a wrong plot that showed a strong trend towards early releases. It has since been fixed. Please redownload `plot_points.json` from Github to update the plot verification tool.
 
-*Can you explain this pattern?*
+*It seems that average views spike at 4AM and 9PM. We might be tempted to conclude that those are the best times to publish. Is that necessarily true?*
 
 ---
 
-Now, we have a pretty good idea on how to get lots of views for your videos (make them short, and publish them early). But surely, it will not be enough for us to get more people to *watch* our videos! We also need to figure out how to get them to *like* our videos. So, let us now figure out how to get more *likes* on our videos.
+Now, we have a pretty good idea on how to get lots of views for your videos (make them short, and publish them at any time besides 5-8PM). But surely, it will not be enough for us to get more people to *watch* our videos! We also need to figure out how to get them to *like* our videos. So, let us now figure out how to get more *likes* on our videos.
 
 ### #Q4: Plot the correlation between the views (x-axis) and likes (y-axis) on a video.
 #### #Q4.1 Verify your plot using `verify_scatter`
@@ -506,6 +509,7 @@ At this point, we know exactly how to make the next trending video on YouTube. B
 ### #Q8: Plot the correlation between the length of a comment text (x-axis) and the number of likes on the comment (y-axis).
 #### #Q8.1 Verify your plot using `verify_scatter`
 
+**CORRECTION:** A previous version (before 4/13, 11:30PM) of `plot_points.json` flipped the x and y axes for this question.  Please redownload `plot_points.json` from Github to update the plot verification tool.
 
 Your output should be a **scatter** plot. Each comment should be represented as a point on the graph with the horizontal axis representing the length of the comment text, and the vertical axis representing the number of likes.
 
@@ -527,6 +531,7 @@ It looks like there is an inverse relation here, but the correlation is not at a
 ### #Q9: Plot the correlation between the length of a comment text (x-axis) and the number of likes on the comment (y-axis) with the outliers removed.
 #### #Q9.1 Verify your plot using `verify_scatter`
 
+**CORRECTION:** A previous version (before 4/13, 11:30PM) of `plot_points.json` flipped the x and y axes for this question. Please redownload `plot_points.json` from Github to update the plot verification tool.
 
 Your output should be a **scatter** plot. Each comment should be represented as a point on the graph with the horizontal axis representing the length of the comment text, and the vertical axis representing the number of likes.
 
