@@ -59,6 +59,11 @@ from questions import view_plot_data, verify_bar, verify_scatter
 ```
 for reasons that will become clear later.
 
+You may also want:
+```python
+import copy
+```
+
 The cell below the imports should contain:
 ```python
 %matplotlib inline
