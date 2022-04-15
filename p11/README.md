@@ -19,6 +19,9 @@
 4/15, 12:30PM:
 - `questions.py` was upgraded to explain the reason for verification failure and to allow for some tolerance when comparing against floats. Please redownload `questions.py` you're struggling to verify your plots.
 
+4/15, 3:20PM:
+- For Q4 and Q5, skip videos that do not have ratings enabled.
+
 **Find any issues?** Report to us:  
 
 - Saurabh Kulkarni <skulkarni27@wisc.edu>
@@ -430,6 +433,8 @@ Now, we have a pretty good idea on how to get lots of views for your videos (mak
 
 Your output should be a **scatter** plot. Each video should be represented as a point on the graph with the horizontal axis representing the number of views, and the vertical axis representing the number of likes.
 
+**Correction:** Skip any videos that do not have their ratings enabled - they don't have data for likes.
+
 **Requirements:**
 - Use the `scatter` function from lab-p11.
 - Label the horizontal axis as "views" and vertical axis as "likes"
@@ -453,6 +458,8 @@ The correlation is not clear from this graph at all! There are a few outliers wi
 Your output should be a **scatter** plot. Each video should be represented as a point on the graph with the horizontal axis representing the number of views, and the vertical axis representing the number of likes.
 
 Use an x-axis threshold value of `10**7`. Remove any points from your previous plot with x-axis value more than this threshold, and plot the remaining points. Remember, we have already seen this process in lab-p11.
+
+**Correction:** Skip any videos that do not have their ratings enabled - they don't have data for likes.
 
 **Requirements:**
 - Use the `scatter` function from lab-p11.
