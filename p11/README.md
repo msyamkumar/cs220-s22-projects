@@ -16,6 +16,9 @@
 4/15, 1AM:
 - For Q20, the relationship between channel names and author IDs was clarified.
 
+4/15, 12:30PM:
+- `questions.py` was upgraded to explain the reason for verification failure and to allow for some tolerance when comparing against floats. Please redownload `questions.py` you're struggling to verify your plots.
+
 **Find any issues?** Report to us:  
 
 - Saurabh Kulkarni <skulkarni27@wisc.edu>

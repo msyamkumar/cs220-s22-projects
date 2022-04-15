@@ -1,8 +1,10 @@
+# version: 4/15, 12:30PM
 #===================== DO NOT EDIT THIS BLOCK =================================#
 import collections
 from collections import namedtuple
 import json
 import os
+import math
 
 PASS = "PASS"
 TEXT_FORMAT = "text"  # question type when expected answer is a str, int, float, or bool
@@ -150,14 +152,43 @@ expected_json = {
 with open("plot_points.json", "r", encoding="utf-8") as fp:
     read_dicts = json.load(fp, object_hook=lambda d: {int(k) if k.isdigit() else k: v for k, v in d.items()})
 
+REL_TOL = 6e-04  # relative tolerance for floats
+ABS_TOL = 15e-03  # absolute tolerance for floats
+
 def verify_bar(plot_dict, qnum):
     if not 1 <= qnum <= 20:
         print("qnum is invalid")
-        return None
+        return False
     if read_dicts[qnum-1] == {}:
         print("This question has no plot to verify")
-        return None
-    return read_dicts[qnum-1] == plot_dict
+        return False
+    answer_dict = read_dicts[qnum-1]
+    if len(answer_dict) != len(plot_dict):
+        #tested
+        print("Expected dict of length %d but got length %d" % (len(answer_dict), len(plot_dict)))
+        return False
+    try:
+        for key in answer_dict:
+            answer_value = answer_dict[key]
+            input_value = plot_dict[key]
+            if type(answer_value) != type(input_value):
+                #tested
+                print("Expected values of type %s but got %s" % (str(type(answer_value)), str(type(input_value))))
+                return False
+            if type(answer_value) == float:
+                if not math.isclose(input_value, answer_value, rel_tol=REL_TOL, abs_tol=ABS_TOL):
+                    print("For key %s: expected float value %f but found %f" % (str(key), answer_value, input_value))
+                    return False
+            elif answer_value != input_value: #answer is not a float
+                #tested
+                print("For key %s: expected value %s but found %s" % (str(key), str(answer_value), str(input_value)))
+                return False
+
+    except KeyError:
+        #tested
+        print("Did not find key " + str(key) + "; make sure key type is " + str(type(key)))
+        return False
+    return True
 
 def verify_scatter(x, y, qnum):
     if not 1 <= qnum <= 20:
@@ -166,9 +197,38 @@ def verify_scatter(x, y, qnum):
     if read_dicts[qnum-1] == {}:
         print("This question has no plot to verify")
         return None
-    answer = zip(read_dicts[qnum-1]["x"], read_dicts[qnum-1]["y"])
-    input = zip(x, y)
-    return sorted(answer) == sorted(input)
+    # allow for iterables like .keys()
+    x = list(x)
+    y = list(y)
+    answer = sorted(zip(read_dicts[qnum-1]["x"], read_dicts[qnum-1]["y"]))
+    input = sorted(zip(x, y))
+
+    if len(answer) != len(input):
+        #tested
+        print("Expected lists of length %d but got length %d" % (len(answer), len(input)))
+        return False
+    for i in range(len(answer)):
+        x_ans, y_ans = answer[i]
+        x_in, y_in = input[i]
+        if type(x_ans) != type(x_in) or type(y_ans) != type(y_in):
+            #tested
+            print("Expected types %s, %s but got %s, %s" % (str(type(x_ans)), str(type(y_ans)), str(type(x_in)), str(type(y_in))))
+            return False
+        if x_ans != x_in:
+            #tested
+            print("When x,y pairs were sorted, expected x value %s at index %d, but found %s" % (str(x_ans), i, str(x_in)))
+            return False
+        if type(y_ans) == float:
+            #tested
+            if not math.isclose(y_in, y_ans, rel_tol=REL_TOL, abs_tol=ABS_TOL):
+                print("For x value %s: expected float value %f but found %f" % (str(x_ans), y_ans, y_in))
+                return False
+        elif y_ans != y_in: #answer is not a float
+            #tested
+            print(type(y_ans))
+            print("For key %s: expected value %s but found %s" % (str(x_ans), str(y_ans), str(y_in)))
+            return False
+    return True
 
 def view_plot_data(qnum):
     if not 1 <= qnum <= 20:
