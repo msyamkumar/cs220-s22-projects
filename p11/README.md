@@ -278,7 +278,7 @@ Step 2 is to replace the `duration` value of each video in the copy of `videos` 
 
 Step 3 is to `bucketize` the copy of `videos` by `'duration'`. Save this to a variable called `duration_buckets`.
 
-Step 4 is to create a new dictionary that maps video ids to the *length* of each of the lists in `duration_buckets`. Do not modify `duration_buckets`.
+Step 4 is to create a new dictionary that maps ~~video ids~~ durations to the *length* of each of the lists in `duration_buckets`. Do not modify `duration_buckets`.
 
 Step 5 is to plot the dictionary created in step 4.
 
