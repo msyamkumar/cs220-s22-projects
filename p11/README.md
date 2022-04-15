@@ -13,6 +13,9 @@
 4/14, 10:00PM:
 - A previous version of `questions.py` required that the lists provided to `verify_scatter` be in the "expected" order. However, order does not matter for scatter plots, so we've updated `verify_scatter` to allow for any order as long as the x,y pairs are associated correctly. If your scatter plot looks right but you are unable to get the verification to pass, please redownload `questions.py`
 
+4/15, 1AM:
+- For Q20, the relationship between channel names and author IDs was clarified.
+
 **Find any issues?** Report to us:  
 
 - Saurabh Kulkarni <skulkarni27@wisc.edu>
@@ -744,6 +747,12 @@ Your answer should be a list of relative paths.
 
 ---
 
+## Comment Authors vs Channel Names
+
+All YouTube users have their own "channels", even if all they do is post comments. The channel IDs in `broken_file` contain the channel names of some of the comment authors. This means that the `author_id` of Comments are actually the same as channel IDs, and thus can be used to look up channel names in the mappings we find.
+
+This means that the words "channel" and "author" are interchangeable when discussing YouTube comments.
+
 ### #Q18: How many channel mappings are in the files in the `broken_file` directory?
 
 Read all the files in the `broken_file` directory using your `get_mapping` function from p10 to answer this. Create a dictionary called `broken_mapping` that combines all of the mappings from these files.
@@ -759,7 +768,7 @@ Read all the files in the `broken_file` directory using your `get_mapping` funct
 
 ### #Q20: What are the names of the top 5 channels from the broken_file with the most likes on their comments?
 
-You should find the comments made by channels with their IDs stored in `broken_file`, accumulate the likes for the same channel, and find the channels with the most likes from among these channels.
+The first step is to find the comments made by authors whose IDs are keys in `broken_mapping`. This is a bucketizing operation. Then, count the likes for each author, and find the authors with the most likes among these authors.
 
 **Requirements:**
 - Use `broken_mapping`
