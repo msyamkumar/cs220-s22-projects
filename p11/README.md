@@ -5,7 +5,13 @@
 4/13, 11:30PM:
 - A **major bug** was detected in the plot for Q3. The verification script and the image have been changed accordingly.
 - The x and y axes were flipped for the verification script for Q8 and Q9. They have been corrected.
-- To get the fixes, please **redownload** `plot_points.json` from the github repo. The version inside `p11.zip` has also been updated.
+- To get the fixes, please **redownload** `plot_points.json` from the github repo. The version inside `p11.zip` has also been updated.  
+
+4/14, 12:30PM:
+- This README previously referred to the data structure that mapped comment ids to Comment objects as `comment_data` instead of `comments`. The correct name is `comments`.
+
+4/14, 10:00PM:
+- A previous version of `questions.py` required that the lists provided to `verify_scatter` be in the "expected" order. However, order does not matter for scatter plots, so we've updated `verify_scatter` to allow for any order as long as the x,y pairs are associated correctly. If your scatter plot looks right but you are unable to get the verification to pass, please redownload `questions.py`
 
 **Find any issues?** Report to us:  
 
@@ -59,12 +65,17 @@ from questions import view_plot_data, verify_bar, verify_scatter
 ```
 for reasons that will become clear later.
 
+You may also want:
+```python
+import copy
+```
+
 The cell below the imports should contain:
 ```python
 %matplotlib inline
 ```
 
-The cells below this should set up all the required data structures such as `videos` and `comment_data` and functions such as `plot_dict` and `scatter` as specified in the lab.
+The cells below this should set up all the required data structures such as `videos` and `comments` and functions such as `plot_dict` and `scatter` as specified in the lab.
 
 <!---
 ```python
@@ -79,7 +90,7 @@ from datetime import datetime as dt #this is for a time_delta only
 
 #data structures
 Comment
-comment_data
+comments
 videos
 
 #functions
@@ -91,7 +102,7 @@ plot_dict(d, label="Please Label Me!!!") #given to you in lab 9
 scatter(x, y, xlabel="please label me!", ylabel="please label me!") #given to you in lab 11
 ```
 --->
-You are expected to use `videos` or `comment_data` as the source of all of your video data. Do not read the data files again.
+You are expected to use `videos` or `comments` as the source of all of your video data. Do not read the data files again.
 <!---
 `videos` should be a **dict** that maps each video ID (str)
 to another **dict** that represents the video and has the following keys:
@@ -270,7 +281,7 @@ Step 2 is to replace the `duration` value of each video in the copy of `videos` 
 
 Step 3 is to `bucketize` the copy of `videos` by `'duration'`. Save this to a variable called `duration_buckets`.
 
-Step 4 is to create a new dictionary that maps video ids to the *length* of each of the lists in `duration_buckets`. Do not modify `duration_buckets`.
+Step 4 is to create a new dictionary that maps ~~video ids~~ durations to the *length* of each of the lists in `duration_buckets`. Do not modify `duration_buckets`.
 
 Step 5 is to plot the dictionary created in step 4.
 
@@ -517,7 +528,7 @@ Your output should be a **scatter** plot. Each comment should be represented as 
 - Use `scatter`
 - Label the horizontal axis as "comment length" and the vertical axis as "likes"
 
-*Hint:* Use `comment_data` to create 2 lists: one of all the like counts of the comments (x axis) and one of all the lengths of the comments (y axis).
+*Hint:* Use `comments` to create 2 lists: one of all the like counts of the comments (x axis) and one of all the lengths of the comments (y axis).
 
 <!---
 **Warning:** `test.py` can only detect if you have a plot here, not if it is correct. So compare your plot with the plot here, and ensure that it matches, so you don't lose points during code review.
