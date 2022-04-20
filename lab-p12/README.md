@@ -2,6 +2,8 @@
 -----------------------------
 ## Corrections/Clarifications
 
+4/20 10:30AM: Assert and sorting instructions for Task 2.7 are updated
+
 **Find any issues?** Please report to us:
 
 - Adil Ahmed <oahmed4@wisc.edu>
