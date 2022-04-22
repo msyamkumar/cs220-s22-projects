@@ -303,7 +303,7 @@ institutions_df = pd.DataFrame(institutions)
 [//]: # ()
 [//]: # (**Warning:** You may create the DataFrame `institutions_df` however you like. However, if you do not create a DataFrame, you will **lose points** during code review.)
 
-Please verify `institutions_df` by running the following code in its own cell. `institutions.json` was included in `p13.zip`:
+Please verify `institutions_df` by running the following code in its own cell. `institutions.json` was included in `p12.zip`:
 
 ```python
 from test import verify_json
@@ -372,7 +372,7 @@ Your output should be an **int**.
 
  **Requirement:**
 - Use `sort_values` to identify the top 10 institutions
-- Use the `year_2021_ranking_df` dataframe that you created in Q11
+- Use the `year_2020_ranking_df` dataframe that you created in Q11
 
 **Hint:**
 - Given two *sets* `A` and `B`, you can find the elements which are in `A` but not in `B` using `A - B`. For example,
