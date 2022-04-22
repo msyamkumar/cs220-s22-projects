@@ -12,22 +12,25 @@
 - Do not deduct from a question if it has already failed the autograder   
 
 ## P12 specific guidelines:
--3 if conditional statements or loops are used to go through a pandas DataFrame (unless permitted) instead of boolean indexing (max deductions for 7+ violations: -20)                           
+-3 if conditional statements or loops are used to go through a pandas DataFrame (unless permitted) instead of boolean indexing (max deductions for 7+ violations: -20)                            
 -2 if .loc is used on a pandas DataFrame to hardcode an index (instead use .iloc appropriately) (max deductions for 5+ violations: -10)     
 
 ## Required data structures and functions:
 
 ```python   
 #for p12:
-download(page, filename) # downloadas page and saves contents to filename    
+download(filename, url) # downloads url and saves contents to filename    
 parse_html(filename) # returns data from html file  
 
 rankings # DataFrame storing data from rankings.json    
 institutions_df
 ```     
 
-## `download(page, filename)`     
+## `download(filename, url)`     
 -3 if function is not created
+
+## rankings data structure:
+-0 if `pd.read_json()` is used to download and save "rankings.json" instead of `download()` function (i.e. both ways are allowed)           
 
 ## Q1, Q2, Q3						
 -2 if incorrect column is used (anything apart from `Country`, `National Rank`, `Institution` for respective questions)           
