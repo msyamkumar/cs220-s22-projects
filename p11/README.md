@@ -535,6 +535,8 @@ At this point, we know exactly how to make the next trending video on YouTube. B
 
 **CORRECTION:** A previous version (before 4/13, 11:30PM) of `plot_points.json` flipped the x and y axes for this question.  Please redownload `plot_points.json` from Github to update the plot verification tool.
 
+**UPDATE:** Use your `comments` data structure for this problem. Some of the comments we expect you to plot are not in `videos` because they are associated with the video that got discarded.  
+
 Your output should be a **scatter** plot. Each comment should be represented as a point on the graph with the horizontal axis representing the length of the comment text, and the vertical axis representing the number of likes.
 
 **Requirements:**
