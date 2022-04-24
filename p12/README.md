@@ -2,7 +2,7 @@
 
 ## Clarifications/Corrections
 
-None yet.
+- 4/24 4:20pm: updated Q16 guidelines in rubric
 
 **Find any issues?** Report to us:
 
