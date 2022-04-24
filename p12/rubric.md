@@ -86,7 +86,6 @@ institutions_df
 -2 if `loc` is used  
 
 ## Q16   
--2 if `pandas.index()` is not used to solve the question   
 -2 if the years being considered are not `2019-2020` and `2021-2022`     
 
 ## Q17
