@@ -664,6 +664,8 @@ the link can still make comments before the video is published.
 - Use `time_delta`
 - Label the horizontal axis as "days after the video was published" and the vertical axis as "likes"
 
+**Clarification:** Do not plot comments that do not have an associated video in `videos`.  
+
 *Hint:* Create 2 lists - one for time deltas and one for likes. Go through `videos`, and for each of the comments, get the time delta and the number of likes. Append each of those values to the appropriate lists.
 
 <!---
