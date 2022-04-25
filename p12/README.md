@@ -386,8 +386,10 @@ set_A - set_B == {10, 30, 50} #Elements which are in set_A but not in set_B
 
 Your output should be a **list** of institutions. The order does not matter.
 
-**Requirement**
-- Use .iloc for lookups. Using .loc is considered hardcoding and you will lose points for using it.
+
+
+**Requirements (updated 4/25)**
+- Do not use .loc. It is considered hardcoding.
 - Use the `year_2021_ranking_df` and `year_2019_ranking_df` dataframe that you created in Q11
 
 **Hint:**
