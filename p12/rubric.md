@@ -33,7 +33,7 @@ institutions_df
 -0 if `pd.read_json()` is used to download and save "rankings.json" instead of `download()` function (i.e. both ways are allowed)           
 
 ## Q1, Q2, Q3						
--2 if incorrect column is used (anything apart from `Country`, `National Rank`, `Institution` for respective questions)           
+-2 if incorrect column is used (anything apart from `Country`, `World Rank`, `Institution` for respective questions)           
 -1 if the output for Q3 is not stored in a variable called `uw_madison`    
 
 ## Q4   		                    					
