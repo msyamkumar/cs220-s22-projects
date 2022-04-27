@@ -81,6 +81,7 @@ import matplotlib
 from questions import verify_plot
 import math
 import os
+import requests
 import numpy as np # this is for given code - do not use it yourself
 ```
 
