@@ -3,6 +3,7 @@
 <h2>Corrections/Clarifications </h2>
 
 * 4/28, 6:35AM: The usage of the `verify_plot` function was incorrectly documented in the README. It has been corrected.
+* 4/28: 6:50AM: `test.py` did not check for caching and did not run the linter originally. This has now been fixed. Please redownload `test.py` to ensure you do not get surprised by the autograder.
 
 **Find any issues?** Report to us:  
 
