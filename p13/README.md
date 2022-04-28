@@ -2,6 +2,8 @@
 
 <h2>Corrections/Clarifications </h2>
 
+* 4/28, 6:35AM: The usage of the `verify_plot` function was incorrectly documented in the README. It has been corrected.
+
 **Find any issues?** Report to us:  
 
 - Saurabh <skulkarni27@wisc.edu>
@@ -122,25 +124,25 @@ def plot_regression_line(df, x, y):
 ```
 Please copy them from your lab and paste them in your project notebook.
 
-Along with it, we'll be giving you a function `verify_plot`, which will take in the same arguments as the plotting function, plus the question number.
+Along with it, we'll be giving you a function `verify_plot`, which will take in the same dataframe as the plotting function, plus the question number.
 
 ```python
 #<qnum>.1
-verify_plot(qnum, df, x, y=None)
+verify_plot(df, qnum)
 ```
 
 So for example, Q4 requires a bar plot, so you'd call
 
 ```python
 #q4.1
-verify_plot(4, top_10_countries, "country", "num_of_institutions")
+verify_plot(num_institutions, 4)
 ```
 
 Questions 16 requires a horizontal bar plot that doesn't take a y value.
 
 ```python
 #q16.1
-verify_plot(16, result_df, "country")
+verify_plot(result_df, 16)
 ```
 
 While `test.py` can verify the DataFrames you intend to plot, it cannot verify the images themselves. That will happen manually during code review.
