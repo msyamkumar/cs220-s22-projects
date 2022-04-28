@@ -387,13 +387,16 @@ You need to answer with a **horizontal bar plot**. Put `country` on the y-axis a
 
 Your image should look like this:
 
-<img src="images/Q16.png" width="500">
+<img src="images/Q16.png" width="700">
 
+<!---
 **Optional:** Finding a correct position for legend will take exploration for every plot. You can invoke `legend` function using AxesSubplot object instance. There are two configurable parameters: `loc` and `bbox_to_anchor`. You can read the [`legend()`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.legend.html) documentation, to learn the details. In order to produce the above plot, we used the below settings:
 
 ```python
 ax.legend(loc='center left', bbox_to_anchor=(1, 0.9))
 ```
+--->
+---
 
 If you haven't already, now is a good time to finish Task 3.5 in the lab. You'll need `get_regression_coeff(df, x, y)` and `plot_regression_line(df, x, y)`.
 
