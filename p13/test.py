@@ -752,6 +752,12 @@ ALLOWED_LINT_ERRS = {
 expected_json = get_expected_json()
 special_order_json = get_special_ordered()
 def main():
+    # delete the downloaded files before grading
+    if "FILES_TO_DOWNLOAD" in globals():
+        for file in FILES_TO_DOWNLOAD:
+            if os.path.exists(file):
+                print("Deleting " + file + " for the purpose of testing")
+                os.remove(file)
     print()
     if (sys.version_info[0] == 3 and sys.version_info[1] >= 8 and sys.platform.startswith("win")):
         import asyncio

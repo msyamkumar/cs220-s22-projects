@@ -4,6 +4,7 @@
 
 * 4/28, 6:35AM: The usage of the `verify_plot` function was incorrectly documented in the README. It has been corrected.
 * 4/28: 6:50AM: `test.py` did not check for caching and did not run the linter originally. This has now been fixed. Please redownload `test.py` to ensure you do not get surprised by the autograder.
+* 4/28: 11:40AM: `test.py` and `questions.py` had a bug where they would always dock 5 points for not caching. They have now been fixed. Please redownload these files if you are having this problem.
 
 **Find any issues?** Report to us:  
 
