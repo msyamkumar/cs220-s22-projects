@@ -1,5 +1,7 @@
 # Lab-P1: Running Programs
 
+WARNING: Unless you took a time portal to become my student in the past, this is not the correct repository :) Please go to the correct github repository for the current semester. If you are a Spring'21 semester student though, you are in the right place.
+
 Welcome to your first lab!  This semester, you're going to learn how to write your own Python code.  But for this lab, you're just going to practice running some Python programs we give you.
 
 **Important:** Before going to the lab, install Anaconda with Python 3.9 on your laptop. We've created videos showing how to do this on [Windows](https://www.youtube.com/watch?v=EhbuqMshs08) and [Mac](https://www.youtube.com/watch?v=CZQJJX-wl4M). Please make sure that *both* checkboxes are checked during the Windows installation.
