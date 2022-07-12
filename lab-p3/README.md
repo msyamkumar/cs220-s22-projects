@@ -1,5 +1,7 @@
 # Lab 3: Learning an API
 
+# WARNING: Unless you took a time portal to become my student in the past, this is not the correct repository :) Please go to the correct github repository for the current semester. If you are a Spring'22 semester student though, you are in the right place.
+
 ### Corrections/Clarifications
 
 - Thursday Feb 10 9:41 AM: `practice.ipynb` updated with correct function name as `get_change_per_year` for Task 2.5.
