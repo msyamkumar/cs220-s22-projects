@@ -1,5 +1,7 @@
 # Lab P5: Looping Patterns and Hurricane API
 
+# WARNING: Unless you took a time portal to become my student in the past, this is not the correct repository :) Please go to the correct github repository for the current semester. If you are a Spring'22 semester student though, you are in the right place.
+
 This lab will introduce you to some fundamental looping patterns that will be helpful in solving p5. It is designed to help you get comfortable with using functions in `project.py` for p5. You will also learn basic methods to manipulate strings that will be helpful in solving p5.
 
 ----------------------------------
