@@ -1,5 +1,7 @@
 # Lab 7: Dictionaries
 
+# WARNING: Unless you took a time portal to become my student in the past, this is not the correct repository :) Please go to the correct github repository for the current semester. If you are a Spring'22 semester student though, you are in the right place.
+
 In this lab, you will analyze recent COVID vaccination data using dictionaries. You will also handle missing data and other issues that arise when dealing with real world datasets.
 
 ### Corrections/Clarifications
