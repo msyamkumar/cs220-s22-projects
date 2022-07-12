@@ -1,5 +1,7 @@
 # Lab P11: Analyzing YouTube Comments (Part 2)
 
+# WARNING: Unless you took a time portal to become my student in the past, this is not the correct repository :) Please go to the correct github repository for the current semester. If you are a Spring'22 semester student though, you are in the right place.
+
 <h2> Corrections/Clarifications </h2>
 
 None yet.
