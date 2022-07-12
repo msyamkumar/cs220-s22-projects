@@ -1,5 +1,7 @@
 # Lab-P2: Python Modes and Programming
 
+# WARNING: Unless you took a time portal to become my student in the past, this is not the correct repository :) Please go to the correct github repository for the current semester. If you are a Spring'22 semester student though, you are in the right place.
+
 In lecture this week, we learned about three ways to run Python: interactive mode, script mode, and notebook "mode" (people outside of 220 won't use that vocabulary for notebooks, hence the quotes). In this lab, you'll practice those three modes. You'll also get practice with operators, modular arithmetic, and Boolean logic.
 
 To get started, please create a `lab2` directory inside your `cs220` directory (if you haven't already).  Then, open a terminal and use `cd` to navigate to `lab2` (you may need to review the steps from [lab-p1](https://github.com/msyamkumar/cs220-s22-projects/tree/main/lab-p1) to remember how to find the pathname of the `lab2` directory).
